@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hero Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./static/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Comfortaa:wght@300..700&family=Michroma&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+
+ <style>
+  
+</style>
+
+</head>
+<body class="relative min-h-screen">
+
+  <div class="absolute inset-0 bg-cover bg-center opacity-15 -z-10" style="background-image: url('./static/images/bg2.jpg');"></div>
+
+
+  
+  <header class="relative z-10 h-screen flex flex-col justify-between">
+
+<div class="w-full flex justify-center fixed top-0 z-[9999]  ">
+  <nav class="w-full max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+    
+    <div class="flex items-center">
+      <img src="./static/images/logo1.jpg" alt="Wise Logo" class="w-24 h-auto" />
+    </div>
+
+    <div class="hidden md:flex items-center gap-8 text-base text-black font-semibold drop-shadow-sm">
+      <a href="#" class="hover:text-purple-300 transition">Home</a>
+      <a href="#" class="hover:text-purple-300 transition">Services</a>
+      <a href="#" class="hover:text-purple-300 transition">About</a>
+      <a href="#" class="hover:text-purple-300 transition">Contact</a>
+    </div>
+
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-black focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <button class="bg-[#151a37] text-white text-sm px-5 py-2 rounded-full font-medium transition hidden md:block">
+      <p>Enquire Now</p>
+    </button>
+  </nav>
+</div>
+
+<div id="mobile-menu"
+     class="md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg px-6 py-10 space-y-6 transform translate-x-full transition-transform duration-300 ease-in-out z-[9998]">
+  <a href="#" class="block text-black font-medium hover:text-purple-300">Home</a>
+  <a href="#" class="block text-black font-medium hover:text-purple-300">Services</a>
+  <a href="#" class="block text-black font-medium hover:text-purple-300">About</a>
+  <a href="#" class="block text-black font-medium hover:text-purple-300">Contact</a>
+  <button class="w-full bg-[#151a37] text-white text-sm px-5 py-2 rounded-full font-medium transition">
+    Enquire Now
+  </button>
+</div>
+
+
+
+
+
+
+    <!-- Hero Content -->
+    
+
+
+
+ <!-- 🌊 Hero Section with Wave Background -->
+<section class="relative w-full min-h-screen overflow-hidden flex items-center justify-center">
+  
+  <!-- Wavy Background -->
+  <div class="wave absolute inset-0 -z-10">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 items-center mt-20 gap-10 md:gap-16 relative z-10 max-md:mt-0">
+
+    <!-- Left Content -->
+    <div class="text-center md:text-left">
+      <p class="px-2 font-bold text-gray-400 text-sm md:text-base">Future Ready</p>
+<h1 class="text-3xl sm:text-4xl lg:text-[4rem] font-bold text-[#2D0C57] leading-snug sm:leading-tight lg:leading-[5rem]">
+  Smart Tech, Smarter Business
+</h1>
+        
+      <p class="text-gray-600 mt-4 text-sm md:text-base">
+        Elevate your online presence with HarmenIT. We design stunning websites,
+        develop wonderful webpages, powerful apps and offer reliable web hosting.
+        Your digital success starts here.
+      </p>
+    </div>
+
+    <!-- Right Image -->
+    <div class="center-v-cut-left shadow-lg overflow-hidden w-full max-w-full">
+      <img src="./static/images/intro.jpeg" alt="Digital Expert"
+           class="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-lg shadow-md">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+</header>
+
+
+
+<section class="relative px-6 lg:px-24 py-20 overflow-hidden mt-10 max-md:mt-0">
+  <!-- Background Image Layer -->
+
+  <!-- Main Content -->
+  <h2 class="text-6xl md:text-[9rem] font-bold text-gray-200 absolute top-10   z-0 select-none uppercase">
+    OUR JOURNEY
+  </h2>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12  relative mt-44">
+    <!-- Left Image and Caption -->
+    <div class="space-y-4">
+  <img src="https://img.freepik.com/free-photo/guy-shows-document-girl-group-young-freelancers-office-have-conversation-working_146671-13569.jpg?ga=GA1.1.1888351375.1703911423&semt=ais_hybrid&w=740" alt="IT Team Collaboration"
+    class="w-full h-[340px] object-cover rounded-md shadow-md">
+
+  <p class="text-sm text-gray-800 font-[Poppins] leading-relaxed">
+    We are driven by a passion for innovation and a dedication to delivering future-proof IT solutions for modern businesses.
+  </p>
+
+  <a href="about.html">
+    <button class="bg-[#151a37]   mt-6 text-white px-6 py-2 rounded-full text-sm font-medium transition">
+     <p> Know More</p>
+    </button>
+  </a>
+</div>
+
+
+    <!-- Right Content -->
+    <div class="flex flex-col justify-between space-y-6 relative">
+      <div class="space-y-3">
+        <p class="text-sm text-gray-700 font-[Poppins] leading-relaxed">
+          Founded in 2010 by a team of tech visionaries, Wise IT Solutions launched its mission to empower organizations through intelligent software and smart automation strategies.
+        </p>
+      </div>
+
+      <!-- Second Image with Caption + Heading on top right -->
+      <div class="relative ">
+       
+
+        <!-- Date Label -->
+        <span class="text-xs text-gray-600 uppercase block mb-1 mt-10">Since 2010</span>
+
+        <!-- Image -->
+        <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241213.jpg?ga=GA1.1.1888351375.1703911423&semt=ais_hybrid&w=740" alt="Server Infrastructure"
+          class="w-full h-[340px] object-cover rounded-md shadow-md">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="py-20 px-4 md:px-20 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Background Heading -->
+    <h2 class="text-6xl md:text-[9rem] font-bold text-gray-200 absolute top-10   z-0 select-none uppercase">
+      Solutions
+    </h2>
+
+    <!-- Foreground Heading & Description -->
+    <div class="mb-28 relative z-10">
+      
+      <p class="text-gray-500 mt-28 md:pr-32 max-md:mt-[4rem]">
+        Scalable, customizable, and smart features designed to streamline your operations, improve efficiency, and accelerate your digital transformation. Empower your team with tools that adapt to your goals and grow with your business.
+      </p>
+    </div>
+
+    <!-- Step Cards -->
+    <div class="relative min-h-[500px] responsive-cards max-md:mt-[-2.5rem]">
+      <!-- Card 1 -->
+      <div data-aos="fade-up" data-aos-delay="0" class="w-[300px] bg-[#151a37] border rounded-xl shadow-md p-6 absolute top-0 left-0 transition-transform duration-500 ease-in-out hover:scale-105">
+        <div class="flex justify-center mb-4">
+          <!-- Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#fff" d="M5.438 30.113h4.606v-4.6H5.438zm-3.851-8.45v3.85h3.85v-3.85zm29.138-10.607c-1.438-4.637-5.15-8.331-9.788-9.787C10.306-2.05.499 5.856.499 15.994h5.988c0-6.362 6.312-11.281 13.006-8.856a8.97 8.97 0 0 1 5.363 5.356c2.444 6.688-2.481 12.988-8.837 13v.019H16v5.988c10.163 0 18.05-9.8 14.725-20.444zM16.019 25.494v-5.956h-5.975v5.975H16v-.019z"/></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-center text-white">360° Digital</h3>
+        <p class="text-sm text-gray-200 text-center mt-2">Complete digital coverage from start to finish.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div data-aos="fade-up" data-aos-delay="200" class="w-[300px] bg-[#151a37] border rounded-xl shadow-md p-6 absolute bottom-[152px] left-[330px] transition-transform duration-500 ease-in-out hover:scale-105">
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#fff" d="m29.707 19.293l-3-3a1 1 0 0 0-1.414 0L16 25.586V30h4.414l9.293-9.293a1 1 0 0 0 0-1.414M19.586 28H18v-1.586l5-5L24.586 23ZM26 21.586L24.414 20L26 18.414L27.586 20ZM18 18v-4h2v4zm-4 0v-6h2v6zm-4 0V8h2v10z"/><path fill="#fff" d="M12 30H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10h-2V4H6v24h6Z"/></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-center text-white">Custom-Fit</h3>
+        <p class="text-sm text-gray-200 text-center mt-2">Solutions tailored exactly to your needs.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div data-aos="fade-up" data-aos-delay="400" class="w-[300px] bg-[#151a37] border rounded-xl shadow-md p-6 absolute bottom-[80px] left-[660px] transition-transform duration-500 ease-in-out hover:scale-105">
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#fff" d="M11 21v-2h8v-7.1q0-2.925-2.037-4.962T12 4.9T7.038 6.938T5 11.9V18H4q-.825 0-1.412-.587T2 16v-2q0-.525.263-.987T3 12.275l.075-1.325q.2-1.7.988-3.15t1.975-2.525T8.762 3.6T12 3t3.225.6t2.725 1.663t1.975 2.512t1 3.15l.075 1.3q.475.225.738.675t.262.95v2.3q0 .5-.262.95t-.738.675V19q0 .825-.587 1.413T19 21zm-2-7q-.425 0-.712-.288T8 13t.288-.712T9 12t.713.288T10 13t-.288.713T9 14m6 0q-.425 0-.712-.288T14 13t.288-.712T15 12t.713.288T16 13t-.288.713T15 14m-8.975-1.55Q5.85 9.8 7.625 7.9T12.05 6q2.225 0 3.913 1.412T18 11.026Q15.725 11 13.813 9.8t-2.938-3.25q-.4 2-1.687 3.563T6.025 12.45"/></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-center text-white">Expert Support</h3>
+        <p class="text-sm text-gray-200 text-center mt-2">Dedicated support from real professionals.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div data-aos="fade-up" data-aos-delay="600" class="w-[300px] bg-[#151a37] border rounded-xl shadow-md p-6 absolute bottom-[10px] left-[990px] transition-transform duration-500 ease-in-out hover:scale-105">
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M14.5 17.742v8.37c0 2.29 1.793 4.146 4.01 4.146c2.215 0 4.012-1.856 4.012-4.146v-8.37m10.978 0l-8.018 12.516m0-12.516L33.5 30.258" stroke-width="1"/><rect width="37" height="37" x="5.5" y="5.5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" rx="4" ry="4" stroke-width="1"/></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-center text-white">Smooth UX</h3>
+        <p class="text-sm text-gray-200 text-center mt-2">Delight your users with seamless interfaces.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="relative text-gray-800 py-16 px-4 md:px-10 max-md:pt-0">
+  <div class="max-w-7xl mx-auto mb-20">
+    <h2 class="text-6xl md:text-[9rem] font-bold text-gray-200 uppercase select-none">
+      Services
+    </h2>
+    <p class="text-gray-600 text-lg md:w-2/3 mt-4">
+      Empowering businesses with tailored solutions, expert insights, and scalable digital transformation services.
+    </p>
+  </div>
+
+
+  <div class="max-w-5xl mx-auto grid grid-cols-12 gap-6 mt-20">
+    
+<!-- Card 1: App Development -->
+<div class="card group relative col-span-12 sm:col-span-6 lg:col-span-4 h-[400px] rounded-xl overflow-hidden shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-all duration-700 
+  group-hover:scale-110 group-hover:blur-sm 
+  clicked:scale-110 clicked:blur-sm"         style="background-image: url('https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg?ga=GA1.1.1888351375.1703911423&semt=ais_hybrid&w=740');"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-50 transition-all duration-700"></div>
+    <div class="relative z-10 h-full flex flex-col justify-end items-center text-center p-6 transition-all duration-700 ease-in-out group-hover:justify-center">
+      <h3 class="text-white text-xl font-bold mb-2 
+  transition-all duration-700 ease-in-out 
+  transform group-hover:-translate-y-2 group-hover:mb-4 
+  clicked:-translate-y-2 clicked:mb-4">
+App Development</h3>
+<p class="text-white text-sm max-w-xs opacity-0 translate-y-6 
+  group-hover:opacity-100 group-hover:translate-y-0 
+  clicked:opacity-100 clicked:translate-y-0 
+  transition-all duration-700 ease-in-out">         Custom mobile and desktop apps to streamline your business processes.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 2: Branding & Designing -->
+<div class="card group relative col-span-12 sm:col-span-6 lg:col-span-4 h-[400px] rounded-xl overflow-hidden shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-all duration-700 
+  group-hover:scale-110 group-hover:blur-sm 
+  clicked:scale-110 clicked:blur-sm"         style="background-image: url('https://img.freepik.com/free-photo/ideas-design-draft-creative-sketch-objective-concept_53876-121105.jpg?ga=GA1.1.1888351375.1703911423&semt=ais_hybrid&w=740');"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-50 transition-all duration-700"></div>
+    <div class="relative z-10 h-full flex flex-col justify-end items-center text-center p-6 transition-all duration-700 ease-in-out group-hover:justify-center">
+      <h3 class="text-white text-xl font-bold mb-2 
+  transition-all duration-700 ease-in-out 
+  transform group-hover:-translate-y-2 group-hover:mb-4 
+  clicked:-translate-y-2 clicked:mb-4">
+Branding & Designing</h3>
+<p class="text-white text-sm max-w-xs opacity-0 translate-y-6 
+  group-hover:opacity-100 group-hover:translate-y-0 
+  clicked:opacity-100 clicked:translate-y-0 
+  transition-all duration-700 ease-in-out">         Build a strong identity with creative visuals and brand strategies.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 3: Web Development -->
+<div class="card group relative col-span-12 sm:col-span-6 lg:col-span-4 h-[400px] rounded-xl overflow-hidden shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-all duration-700 
+  group-hover:scale-110 group-hover:blur-sm 
+  clicked:scale-110 clicked:blur-sm"         style="background-image: url('https://img.freepik.com/free-photo/website-development-links-seo-webinar-cyberspace-concept_53876-120953.jpg?ga=GA1.1.1888351375.1703911423&semt=ais_hybrid&w=740');"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-50 transition-all duration-700"></div>
+    <div class="relative z-10 h-full flex flex-col justify-end items-center text-center p-6 transition-all duration-700 ease-in-out group-hover:justify-center">
+     <h3 class="text-white text-xl font-bold mb-2 
+  transition-all duration-700 ease-in-out 
+  transform group-hover:-translate-y-2 group-hover:mb-4 
+  clicked:-translate-y-2 clicked:mb-4">
+Web Development</h3>
+<p class="text-white text-sm max-w-xs opacity-0 translate-y-6 
+  group-hover:opacity-100 group-hover:translate-y-0 
+  clicked:opacity-100 clicked:translate-y-0 
+  transition-all duration-700 ease-in-out">         Responsive and modern websites tailored to your business goals.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 4: Digital Marketing -->
+  <div class="col-span-12 sm:col-span-6 lg:col-span-4 group relative h-[400px] rounded-xl overflow-hidden shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-all duration-700 
+  group-hover:scale-110 group-hover:blur-sm 
+  clicked:scale-110 clicked:blur-sm"         style="background-image: url('https://img.freepik.com/free-photo/marketing-ideas-share-research-planning-concept_53876-127431.jpg?ga=GA1.1.1888351375.1703911423&semt=ais_hybrid&w=740');"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-50 transition-all duration-700"></div>
+    <div class="relative z-10 h-full flex flex-col justify-end items-center text-center p-6 transition-all duration-700 ease-in-out group-hover:justify-center">
+      <h3 class="text-white text-xl font-bold mb-2 
+  transition-all duration-700 ease-in-out 
+  transform group-hover:-translate-y-2 group-hover:mb-4 
+  clicked:-translate-y-2 clicked:mb-4">
+Digital Marketing</h3>
+<p class="text-white text-sm max-w-xs opacity-0 translate-y-6 
+  group-hover:opacity-100 group-hover:translate-y-0 
+  clicked:opacity-100 clicked:translate-y-0 
+  transition-all duration-700 ease-in-out">         Boost your reach with SEO, social media, and campaign strategies.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 5: UI/UX Design -->
+  <div class="col-span-12 sm:col-span-6 lg:col-span-4 group relative h-[400px] rounded-xl overflow-hidden shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-all duration-700 
+  group-hover:scale-110 group-hover:blur-sm 
+  clicked:scale-110 clicked:blur-sm"           style="background-image: url('https://img.freepik.com/free-vector/smart-home-management_52683-43471.jpg?ga=GA1.1.1888351375.1703911423&semt=ais_hybrid&w=740');"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-50 transition-all duration-700"></div>
+    <div class="relative z-10 h-full flex flex-col justify-end items-center text-center p-6 transition-all duration-700 ease-in-out group-hover:justify-center">
+      <h3 class="text-white text-xl font-bold mb-2 
+  transition-all duration-700 ease-in-out 
+  transform group-hover:-translate-y-2 group-hover:mb-4 
+  clicked:-translate-y-2 clicked:mb-4">
+UI/UX Design</h3>
+<p class="text-white text-sm max-w-xs opacity-0 translate-y-6 
+  group-hover:opacity-100 group-hover:translate-y-0 
+  clicked:opacity-100 clicked:translate-y-0 
+  transition-all duration-700 ease-in-out">         Craft seamless, user-friendly experiences across platforms.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 6: Software Solutions -->
+  <div class="col-span-12 sm:col-span-6 lg:col-span-4 group relative h-[400px] rounded-xl overflow-hidden shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-all duration-700 
+  group-hover:scale-110 group-hover:blur-sm 
+  clicked:scale-110 clicked:blur-sm"           style="background-image: url('https://img.freepik.com/free-photo/programming-background-collage_23-2149901770.jpg?ga=GA1.1.1888351375.1703911423&semt=ais_hybrid&w=740');"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-50 transition-all duration-700"></div>
+    <div class="relative z-10 h-full flex flex-col justify-end items-center text-center p-6 transition-all duration-700 ease-in-out group-hover:justify-center">
+     <h3 class="text-white text-xl font-bold mb-2 
+  transition-all duration-700 ease-in-out 
+  transform group-hover:-translate-y-2 group-hover:mb-4 
+  clicked:-translate-y-2 clicked:mb-4">
+Softwares</h3>
+<p class="text-white text-sm max-w-xs opacity-0 translate-y-6 
+  group-hover:opacity-100 group-hover:translate-y-0 
+  clicked:opacity-100 clicked:translate-y-0 
+  transition-all duration-700 ease-in-out">         From ERP to automation, we develop powerful custom software tools.
+      </p>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<div class="max-w-7xl rounded-xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-6 gap-6 mt-20 max-md:mt-0">
+
+  <!-- About Box -->
+  <div class="md:col-span-4 bg-[#151a37] text-white rounded-3xl p-8 flex flex-col justify-center">
+<span class="inline-block text-sm mb-3 py-1 px-2 bg-white/10 rounded-full w-fit">About Us</span>
+    <h2 class="text-3xl font-bold leading-snug">TENT HIKING: YOUR ULTIMATE ADVENTURE PARTNER.</h2>
+    <p class="mt-4 text-sm text-white/90">
+      Tent Hiking is your ultimate adventure partner, offering expertise, quality gear, and a passion for outdoor experiences.
+      Our team is dedicated to helping you make unforgettable memories on your hiking journeys.
+      Join us today and elevate your hiking adventures to new heights!
+    </p>
+  </div>
+
+  <!-- Right Section: Stat Boxes -->
+  <div class="md:col-span-2 grid grid-cols-2 gap-6">
+    
+    <!-- Left Column: Two boxes stacked vertically -->
+    <div class="flex flex-col justify-between space-y-6">
+      <!-- Stat 1 -->
+      <div class="bg-gray-100 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow">
+        <div class="mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#151a37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 12 17.657 7.757M6.343 7.757L10.586 12 6.343 16.243" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-[#151a37]">30+</h3>
+        <p class="text-sm text-gray-600 mt-1">Countries with trusted clients</p>
+      </div>
+
+      <!-- Stat 2 -->
+      <div class="bg-gray-100 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow">
+        <div class="mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#151a37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M15 11a4 4 0 10-8 0 4 4 0 008 0zM17 11a4 4 0 014 4v1a4 4 0 01-4 4h-2.5" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-[#151a37]">120+</h3>
+        <p class="text-sm text-gray-600 mt-1">Global Clients</p>
+      </div>
+    </div>
+
+    <!-- Right Column: One centered box -->
+    <div class="flex items-center">
+      <div class="bg-gradient-to-tr from-gray-200 to-gray-100 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow w-full">
+        <div class="mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#151a37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 7a2 2 0 012-2h4l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-[#151a37]">1450+</h3>
+        <p class="text-sm text-gray-600 mt-1">Projects Delivered</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Full Width Image -->
+  <div class="md:col-span-6">
+    <img src="https://images.pexels.com/photos/6774432/pexels-photo-6774432.jpeg" alt="Hiking Image" class="w-full h-[400px] object-cover rounded-3xl" />
+  </div>
+
+</div>
+
+
+
+<section class="relative w-full py-20 sm:py-24 bg-white px-4 sm:px-6 md:px-16 lg:px-32">
+  <!-- Large faded heading -->
+  <h2 class=" text-[2.5rem] sm:text-6xl md:text-[8rem] lg:text-[9rem] font-bold text-gray-200 absolute top-6 sm:top-10 left-4 sm:left-6 md:left-24 lg:left-32 z-0 select-none leading-none">
+    CAREERS
+  </h2>
+
+  <!-- Content wrapper -->
+  <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-12">
+    
+    <!-- Left Text Content -->
+    <div class="flex flex-col justify-center space-y-6 text-center md:text-left md:mt-[7rem]">
+      <p class="text-lg text-gray-700 font-medium">
+        Join us and do work that matters
+      </p>
+      <p class="text-base text-gray-600 leading-relaxed">
+        At our company, we believe in innovation, collaboration, and impact. From engineers to designers, every team member plays a vital role in shaping solutions that serve millions. We offer flexible work environments, continuous learning, and a chance to grow with us.
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex flex-wrap justify-center md:justify-start gap-4">
+        <a href="#" class="px-6 py-2 bg-[#151a37] text-white text-sm rounded-full hover:bg-[#1f254f] transition-all">
+          Explore Opportunities
+        </a>
+        <a href="#" class="px-6 py-2 border border-[#151a37] text-[#151a37] text-sm rounded-full hover:bg-[#151a37] hover:text-white transition-all">
+          Explore Cybexel Life
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="mt-10 md:mt-28 overflow-hidden rounded-xl">
+      <img
+        src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg"
+        alt="Team working"
+        class="rounded-xl shadow-lg w-full max-h-[400px] sm:max-h-[500px] md:max-h-[600px] object-cover transform transition-transform duration-500 hover:scale-105"
+      >
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Foreground Heading & Description -->
+<div class="relative z-10 w-full text-center px-4 sm:px-10 md:px-20 lg:px-32 bg-[#151a37] py-16 sm:py-20">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-200 uppercase">
+    Reach Out
+  </h2>
+  <p class="text-sm sm:text-base text-gray-400 mt-4 leading-relaxed max-w-4xl mx-auto">
+    Scalable, customizable, and smart features designed to streamline your operations, improve efficiency, and accelerate your digital transformation. Empower your team with tools that adapt to your goals and grow with your business.
+  </p>
+  <a href="#contact" class="inline-block mt-6 px-6 py-3 text-white rounded-lg shadow border border-white transition duration-300 hover:bg-white hover:text-[#151a37]">
+    Contact Us
+  </a>
+</div>
+
+
+
+
+<footer class="bg-white text-gray-300 pt-20 pb-20 px-6 md:px-20 min-h-[400px]">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <div>
+      <h2 class="text-2xl font-bold text-gray-500 mb-4">GlobalTech</h2>
+      <p class="text-sm leading-6 text-gray-500">
+        Empowering enterprises with smart, scalable, and secure digital solutions across the globe.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold text-gray-500 mb-3">Company</h3>
+      <ul class="space-y-8 text-sm mt-6 text-gray-500">
+        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+        <li><a href="#" class="hover:text-white transition">Newsroom</a></li>
+        <li><a href="#" class="hover:text-white transition">Investors</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold text-gray-500 mb-3">Services</h3>
+      <ul class="space-y-8 text-sm text-gray-500">
+        <li><a href="#" class="hover:text-white transition">IT Consulting</a></li>
+        <li><a href="#" class="hover:text-white transition">Cloud Solutions</a></li>
+        <li><a href="#" class="hover:text-white transition">Cybersecurity</a></li>
+        <li><a href="#" class="hover:text-white transition">Digital Transformation</a></li>
+      </ul>
+    </div>
+
+    <div>
+  <h3 class="text-lg font-semibold text-gray-500 mb-3">Get in Touch</h3>
+  <ul class="space-y-6 text-sm text-gray-500">
+
+    <li class="flex items-start">
+      <span class="min-w-[70px] font-medium">Email:</span>
+      <a href="mailto:info@globaltech.com" class="hover:text-white">info@globaltech.com</a>
+    </li>
+
+    <li class="flex items-start">
+      <span class="min-w-[70px] font-medium">Phone:</span>
+      <a href="tel:+18001234567" class="hover:text-white">+1 800 123 4567</a>
+    </li>
+
+    <li class="flex items-start">
+      <span class="min-w-[70px] font-medium">Address:</span>
+      <span>
+        123 Innovation Park,<br>
+        New York, USA
+      </span>
+    </li>
+
+  </ul>
+</div>
+
+  </div>
+
+  <div class="border-t border-gray-600 mt-12 pt-6 text-sm flex flex-col md:flex-row justify-between items-center">
+    <p class="text-gray-500">&copy; 2025 GlobalTech. All rights reserved.</p>
+    <div class="mt-4 md:mt-0 flex space-x-4">
+      <a href="#" aria-label="LinkedIn" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+      <a href="#" aria-label="Twitter" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+  <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+
+<script src="./static/js/script.js"></script>
+</body>
+</html>
