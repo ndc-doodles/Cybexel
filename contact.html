@@ -30,30 +30,32 @@
  
  
  
- <header class="relative z-10 h-auto flex flex-col justify-between">
+ <header class="relative z-[9999] h-auto flex flex-col justify-between">
 
-<div class="w-full flex justify-center fixed top-0 z-[9999]  ">
-<nav id="navbar" class="text-white w-full max-w-7xl mx-auto px-4 py-6 flex justify-between items-center transition-all duration-300">
+<div class="w-full flex justify-center fixed top-0   ">
+<nav id="navbar" class="text-white w-full  mx-auto px-4 py-6 flex justify-between items-center transition-all duration-300 ">
     
     <div class="flex items-center">
       <img src="./static/images/logo1.jpg" alt="Wise Logo" class="w-24 h-auto" />
     </div>
 
     <div class="hidden md:flex items-center gap-8 text-base text-white font-semibold drop-shadow-sm">
-      <a href="index.html" class="hover:text-purple-300 transition">Home</a>
-      <a href="serices.html" class="hover:text-purple-300 transition">Services</a>
-      <a href="about.html" class="hover:text-purple-300 transition">About</a>
-      <a href="contact.html" class="hover:text-purple-300 transition">Contact</a>
+      <a href="index.html" class="nav-link hover:text-purple-300 transition">Home</a>
+<a href="serices.html" class="nav-link hover:text-purple-300 transition">Services</a>
+<a href="about.html" class="nav-link hover:text-purple-300 transition">About</a>
+<a href="contact.html" class="nav-link hover:text-purple-300 transition">Contact</a>
+
     </div>
 
     <div class="md:hidden">
-      <button id="menu-toggle" class="text-black focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
+  <button id="menu-toggle" class="focus:outline-none">
+    <svg id="menu-icon" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</div>
+
 
   <button id="enquire-btn" class="bg-white text-[#151a37] text-sm px-5 py-2 rounded-full font-medium transition hidden md:block">
       <p>Enquire Now</p>
