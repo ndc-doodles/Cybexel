@@ -23,9 +23,9 @@
 
 
   
-  <header class="relative z-10 h-screen flex flex-col justify-between">
+  <header class="relative z-[9999] h-screen flex flex-col justify-between">
 
-<div class="w-full flex justify-center fixed top-0 z-[9999]  ">
+<div id="navbar-container" class="w-full flex justify-center fixed top-0 z-[9999] transition-all duration-300">
   <nav class="w-full max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
     
     <div class="flex items-center">
@@ -180,13 +180,12 @@
 <section class="py-20 px-4 md:px-20 relative overflow-hidden">
   <div class="max-w-7xl mx-auto">
 
-    <!-- Background Heading -->
     <h2 class="text-6xl md:text-[9rem] font-bold text-gray-200 absolute top-10   z-0 select-none uppercase">
       Solutions
     </h2>
 
     <!-- Foreground Heading & Description -->
-    <div class="mb-28 relative z-10">
+    <div class="mb-20 relative z-10">
       
       <p class="text-gray-500 mt-28 md:pr-32 max-md:mt-[4rem]">
         Scalable, customizable, and smart features designed to streamline your operations, improve efficiency, and accelerate your digital transformation. Empower your team with tools that adapt to your goals and grow with your business.
@@ -194,90 +193,42 @@
     </div>
 
     <!-- Step Cards -->
-    <div class="relative min-h-[500px] responsive-cards max-md:mt-[-2.5rem]">
-      <!-- Card 1 -->
-      <div data-aos="fade-up" data-aos-delay="0" class="w-[300px] bg-[#151a37] border rounded-xl shadow-md p-6 absolute top-0 left-0 transition-transform duration-500 ease-in-out hover:scale-105">
-        <div class="flex justify-center mb-4">
-          <!-- Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#fff" d="M5.438 30.113h4.606v-4.6H5.438zm-3.851-8.45v3.85h3.85v-3.85zm29.138-10.607c-1.438-4.637-5.15-8.331-9.788-9.787C10.306-2.05.499 5.856.499 15.994h5.988c0-6.362 6.312-11.281 13.006-8.856a8.97 8.97 0 0 1 5.363 5.356c2.444 6.688-2.481 12.988-8.837 13v.019H16v5.988c10.163 0 18.05-9.8 14.725-20.444zM16.019 25.494v-5.956h-5.975v5.975H16v-.019z"/></svg>
-        </div>
-        <h3 class="text-lg font-semibold text-center text-white">360° Digital</h3>
-        <p class="text-sm text-gray-200 text-center mt-2">Complete digital coverage from start to finish.</p>
-      </div>
-
-      <!-- Card 2 -->
-      <div data-aos="fade-up" data-aos-delay="200" class="w-[300px] bg-[#151a37] border rounded-xl shadow-md p-6 absolute bottom-[152px] left-[330px] transition-transform duration-500 ease-in-out hover:scale-105">
-        <div class="flex justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#fff" d="m29.707 19.293l-3-3a1 1 0 0 0-1.414 0L16 25.586V30h4.414l9.293-9.293a1 1 0 0 0 0-1.414M19.586 28H18v-1.586l5-5L24.586 23ZM26 21.586L24.414 20L26 18.414L27.586 20ZM18 18v-4h2v4zm-4 0v-6h2v6zm-4 0V8h2v10z"/><path fill="#fff" d="M12 30H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10h-2V4H6v24h6Z"/></svg>
-        </div>
-        <h3 class="text-lg font-semibold text-center text-white">Custom-Fit</h3>
-        <p class="text-sm text-gray-200 text-center mt-2">Solutions tailored exactly to your needs.</p>
-      </div>
-
-      <!-- Card 3 -->
-      <div data-aos="fade-up" data-aos-delay="400" class="w-[300px] bg-[#151a37] border rounded-xl shadow-md p-6 absolute bottom-[80px] left-[660px] transition-transform duration-500 ease-in-out hover:scale-105">
-        <div class="flex justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#fff" d="M11 21v-2h8v-7.1q0-2.925-2.037-4.962T12 4.9T7.038 6.938T5 11.9V18H4q-.825 0-1.412-.587T2 16v-2q0-.525.263-.987T3 12.275l.075-1.325q.2-1.7.988-3.15t1.975-2.525T8.762 3.6T12 3t3.225.6t2.725 1.663t1.975 2.512t1 3.15l.075 1.3q.475.225.738.675t.262.95v2.3q0 .5-.262.95t-.738.675V19q0 .825-.587 1.413T19 21zm-2-7q-.425 0-.712-.288T8 13t.288-.712T9 12t.713.288T10 13t-.288.713T9 14m6 0q-.425 0-.712-.288T14 13t.288-.712T15 12t.713.288T16 13t-.288.713T15 14m-8.975-1.55Q5.85 9.8 7.625 7.9T12.05 6q2.225 0 3.913 1.412T18 11.026Q15.725 11 13.813 9.8t-2.938-3.25q-.4 2-1.687 3.563T6.025 12.45"/></svg>
-        </div>
-        <h3 class="text-lg font-semibold text-center text-white">Expert Support</h3>
-        <p class="text-sm text-gray-200 text-center mt-2">Dedicated support from real professionals.</p>
-      </div>
-
-      <!-- Card 4 -->
-      <div data-aos="fade-up" data-aos-delay="600" class="w-[300px] bg-[#151a37] border rounded-xl shadow-md p-6 absolute bottom-[10px] left-[990px] transition-transform duration-500 ease-in-out hover:scale-105">
-        <div class="flex justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M14.5 17.742v8.37c0 2.29 1.793 4.146 4.01 4.146c2.215 0 4.012-1.856 4.012-4.146v-8.37m10.978 0l-8.018 12.516m0-12.516L33.5 30.258" stroke-width="1"/><rect width="37" height="37" x="5.5" y="5.5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" rx="4" ry="4" stroke-width="1"/></svg>
-        </div>
-        <h3 class="text-lg font-semibold text-center text-white">Smooth UX</h3>
-        <p class="text-sm text-gray-200 text-center mt-2">Delight your users with seamless interfaces.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-<section class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold text-gray-900 mb-12">Supercharge Your Workflow</h2>
+  <div class="max-w-7xl mx-auto px-2 text-center">
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Card 1 -->
-      <div class="bg-orange-50 rounded-xl p-6 text-left shadow hover:shadow-md transition">
-        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Automate Tasks</p>
-        <h3 class="text-xl font-semibold mb-2">Save Hours with AI-Powered Automation</h3>
-        <p class="text-gray-600 mb-4">Reduce manual work with smart automation that streamlines repetitive tasks, freeing up time for what matters most.</p>
-        <a href="#" class="text-sm font-medium text-gray-800 hover:underline">Get Started →</a>
+      <div class="bg-[#151a37]/10 rounded-xl p-6 text-left shadow hover:shadow-md transition">
+        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">360° Digital</p>
+        <h3 class="text-xl font-semibold mb-2">Achieve More with 360° Digital Coverage</h3>
+        <p class="text-gray-600 mb-4">End-to-end digital coverage that simplifies complex tasks, increases productivity, and consistently drives sustainable growth.</p>
+        <!-- <a href="#" class="text-sm font-medium text-gray-800 hover:underline">Get Started →</a> -->
       </div>
 
       <!-- Card 2 -->
       <div class="bg-blue-50 rounded-xl p-6 text-left shadow hover:shadow-md transition">
-        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Real-Time Collaboration</p>
-        <h3 class="text-xl font-semibold mb-2">Work Seamlessly with Your Team</h3>
-        <p class="text-gray-600 mb-4">Bring your team together with live collaboration, instant feedback, and version control—no more messy email threads.</p>
-        <a href="#" class="text-sm font-medium text-gray-800 hover:underline">Try It Now →</a>
+        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Custom-Fit</p>
+        <h3 class="text-xl font-semibold mb-2">Custom-Fit Solutions, Built Around You</h3>
+        <p class="text-gray-600 mb-4">Get exactly what you need with solutions tailored to your goals, workflows, and challenges—no one-size-fits-all approach here.</p>
+        <!-- <a href="#" class="text-sm font-medium text-gray-800 hover:underline">Try It Now →</a> -->
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-purple-50 rounded-xl p-6 text-left shadow hover:shadow-md transition">
-        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Powerful Integrations</p>
-        <h3 class="text-xl font-semibold mb-2">Connect with Your Favorite Tools</h3>
-        <p class="text-gray-600 mb-4">Integrate with Slack, Notion, Zapier, and more to keep your workflow efficient and connected across all platforms.</p>
-        <a href="#" class="text-sm font-medium text-gray-800 hover:underline">Explore Integrations →</a>
+      <div class="bg-[#fdebfd] rounded-xl p-6 text-left shadow hover:shadow-md transition">
+        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Expert Support</p>
+        <h3 class="text-xl font-semibold mb-2">Expert Support You Can Rely On</h3>
+        <p class="text-gray-600 mb-4">Get dedicated help from real professionals who understand your needs and are here to ensure your success every step of the way.</p>
+        <!-- <a href="#" class="text-sm font-medium text-gray-800 hover:underline">Explore Integrations →</a> -->
       </div>
 
       <!-- Card 4 -->
-      <div class="bg-green-50 rounded-xl p-6 text-left shadow hover:shadow-md transition">
-        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Advanced Analytics</p>
-        <h3 class="text-xl font-semibold mb-2">Make Data-Driven Decisions</h3>
-        <p class="text-gray-600 mb-4">Gain insights with real-time analytics and reports, helping you optimize performance and drive better results.</p>
-        <a href="#" class="text-sm font-medium text-gray-800 hover:underline">View Insights →</a>
+      <div class="bg-[#151a37]/10 rounded-xl p-6 text-left shadow hover:shadow-md transition">
+        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Smooth UX</p>
+        <h3 class="text-xl font-semibold mb-2">Deliver a Smooth UX</h3>
+        <p class="text-gray-600 mb-4">Delight users with intuitive design, fast performance, and effortless navigation that keeps them engaged and coming back.</p>
+        <!-- <a href="#" class="text-sm font-medium text-gray-800 hover:underline">View Insights →</a> -->
       </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -293,7 +244,9 @@
 
 
 
-<section class="relative text-gray-800 py-16 px-4 md:px-10 max-md:pt-0">
+
+
+<section class="relative text-gray-800 mt-10 px-4 md:px-10 max-md:pt-0">
   <div class="max-w-7xl mx-auto mb-20">
     <h2 class="text-6xl md:text-[9rem] font-bold text-gray-200 uppercase select-none">
       Services
@@ -434,7 +387,7 @@ Softwares</h3>
 
 
 
-<div class="max-w-7xl rounded-xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-6 gap-6 mt-20 max-md:mt-0">
+<div class="max-w-7xl rounded-xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-6 gap-6 mt-24 max-md:mt-0">
 
   <!-- About Box -->
   <div class="md:col-span-4 bg-[#151a37] text-white rounded-3xl p-8 flex flex-col justify-center">
@@ -501,9 +454,9 @@ Softwares</h3>
 
 
 
-<section class="relative w-full py-20 sm:py-24 bg-white px-4 sm:px-6 md:px-16 lg:px-32">
+<section class="relative w-full py-20 sm:py-24 bg-white px-4 sm:px-6 md:px-16 lg:px-32 mt-10">
   <!-- Large faded heading -->
-  <h2 class=" text-[2.5rem] sm:text-6xl md:text-[8rem] lg:text-[9rem] font-bold text-gray-200 absolute top-6 sm:top-10 left-4 sm:left-6 md:left-24 lg:left-32 z-0 select-none leading-none">
+  <h2 class=" text-[2.5rem] sm:text-6xl md:text-[8rem] lg:text-[9rem] font-bold text-gray-200 absolute top-6 sm:top-10 left-4 sm:left-4 md:left-24 lg:left-28 z-0 select-none leading-none">
     CAREERS
   </h2>
 
@@ -524,7 +477,7 @@ Softwares</h3>
         <a href="#" class="px-6 py-2 bg-[#151a37] text-white text-sm rounded-full hover:bg-[#1f254f] transition-all">
           Explore Opportunities
         </a>
-        <a href="#" class="px-6 py-2 border border-[#151a37] text-[#151a37] text-sm rounded-full hover:bg-[#151a37] hover:text-white transition-all">
+        <a href="#" class="px-6 py-2 border border-[#151a37] text-[#151a37] text-sm rounded-full hover:bg-[#151a37] hover:text-[#151a37] transition-all">
           Explore Cybexel Life
         </a>
       </div>
@@ -563,11 +516,11 @@ Softwares</h3>
 
 
 
-<footer class="bg-white text-gray-300 pt-20 pb-20 px-6 md:px-20 min-h-[400px]">
+<footer class="bg-white text-gray-300 pt-20 pb-2 px-6 md:px-20 min-h-[400px]">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
 
     <div>
-      <h2 class="text-2xl font-bold text-gray-500 mb-4">GlobalTech</h2>
+      <h2 class="text-2xl font-bold text-gray-500 mb-4">CYBEXEL</h2>
       <p class="text-sm leading-6 text-gray-500">
         Empowering enterprises with smart, scalable, and secure digital solutions across the globe.
       </p>
@@ -576,35 +529,35 @@ Softwares</h3>
     <div>
       <h3 class="text-lg font-semibold text-gray-500 mb-3">Company</h3>
       <ul class="space-y-8 text-sm mt-6 text-gray-500">
-        <li><a href="#" class="hover:text-white transition">About Us</a></li>
-        <li><a href="#" class="hover:text-white transition">Careers</a></li>
-        <li><a href="#" class="hover:text-white transition">Newsroom</a></li>
-        <li><a href="#" class="hover:text-white transition">Investors</a></li>
+        <li><a href="#" class="hover:text-[#151a37] transition">About Us</a></li>
+        <li><a href="#" class="hover:text-[#151a37] transition">Careers</a></li>
+        <li><a href="#" class="hover:text-[#151a37] transition">Newsroom</a></li>
+        <li><a href="#" class="hover:text-[#151a37] transition">Investors</a></li>
       </ul>
     </div>
 
     <div>
       <h3 class="text-lg font-semibold text-gray-500 mb-3">Services</h3>
-      <ul class="space-y-8 text-sm text-gray-500">
-        <li><a href="#" class="hover:text-white transition">IT Consulting</a></li>
-        <li><a href="#" class="hover:text-white transition">Cloud Solutions</a></li>
-        <li><a href="#" class="hover:text-white transition">Cybersecurity</a></li>
-        <li><a href="#" class="hover:text-white transition">Digital Transformation</a></li>
+      <ul class="space-y-8 text-sm mt-6 text-gray-500">
+        <li><a href="#" class="hover:text-[#151a37] transition">IT Consulting</a></li>
+        <li><a href="#" class="hover:text-[#151a37] transition">Cloud Solutions</a></li>
+        <li><a href="#" class="hover:text-[#151a37] transition">Cybersecurity</a></li>
+        <li><a href="#" class="hover:text-[#151a37] transition">Digital Transformation</a></li>
       </ul>
     </div>
 
     <div>
   <h3 class="text-lg font-semibold text-gray-500 mb-3">Get in Touch</h3>
-  <ul class="space-y-6 text-sm text-gray-500">
+  <ul class="space-y-6 text-sm text-gray-500 mt-6">
 
     <li class="flex items-start">
       <span class="min-w-[70px] font-medium">Email:</span>
-      <a href="mailto:info@globaltech.com" class="hover:text-white">info@globaltech.com</a>
+      <a href="mailto:info@globaltech.com" class="hover:text-[#151a37]">info@globaltech.com</a>
     </li>
 
     <li class="flex items-start">
       <span class="min-w-[70px] font-medium">Phone:</span>
-      <a href="tel:+18001234567" class="hover:text-white">+1 800 123 4567</a>
+      <a href="tel:+18001234567" class="hover:text-[#151a37]">+1 800 123 4567</a>
     </li>
 
     <li class="flex items-start">
@@ -620,12 +573,12 @@ Softwares</h3>
 
   </div>
 
-  <div class="border-t border-gray-600 mt-12 pt-6 text-sm flex flex-col md:flex-row justify-between items-center">
+  <div class="border-t border-gray-600 mt-32 pt-6 text-sm flex flex-col md:flex-row justify-between items-center">
     <p class="text-gray-500">&copy; 2025 GlobalTech. All rights reserved.</p>
     <div class="mt-4 md:mt-0 flex space-x-4">
-      <a href="#" aria-label="LinkedIn" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-      <a href="#" aria-label="Twitter" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
-      <a href="#" aria-label="Instagram" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn" class="hover:text-[#151a37] transition"><i class="fab fa-linkedin"></i></a>
+      <a href="#" aria-label="Twitter" class="hover:text-[#151a37] transition"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram" class="hover:text-[#151a37] transition"><i class="fab fa-instagram"></i></a>
     </div>
   </div>
 </footer>
