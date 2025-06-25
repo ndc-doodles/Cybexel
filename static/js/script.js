@@ -17,3 +17,14 @@
       navbar.classList.remove('bg-white/20', 'backdrop-blur-md');
     }
   });
+
+
+
+
+
+
+
+
+
+
+ 

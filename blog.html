@@ -12,16 +12,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Comfortaa:wght@300..700&family=Michroma&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+<link href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 
- <style>
-  
-</style>
+
+
 
 </head>
 <body class="relative min-h-screen">
 
-  <div class="absolute inset-0 bg-cover bg-center opacity-10 -z-10" style="background-image: url('./static/images/bg2.jpg');"></div>
+  <div class="absolute inset-0 bg-cover bg-center opacity-20 -z-10" style="background-image: url('./static/images/bg2.jpg');"></div>
  
  
  
@@ -44,12 +46,13 @@
       </div>
       </a>
 
+      <!-- Desktop Links -->
       <div class="hidden md:flex items-center gap-8 text-base font-semibold nav-links text-white">
         <a href="index.html" class="nav-link hover:text-purple-300 transition">Home</a>
         <a href="services.html" class="nav-link hover:text-purple-300 transition">Services</a>
         <a href="careers.html" class="nav-link hover:text-purple-300 transition">Careers</a>
         <a href="about.html" class="nav-link hover:text-purple-300 transition">About</a>
-        <a href="blog.html" class="nav-link hover:text-purple-300 transition">Blog</a>
+        <a href="blog.html" class="nav-link hover:text-purple-300 transition text-purple-500 font-bold">Blog</a>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -72,13 +75,14 @@
     </div>
   </nav>
 
+  <!-- Mobile Menu -->
   <div id="mobile-menu"
        class="md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg px-6 py-10 space-y-6 transform translate-x-full transition-transform duration-300 ease-in-out z-[9998]">
     <a href="index.html" class="block text-black font-medium hover:text-purple-300">Home</a>
     <a href="services.html" class="block text-black font-medium hover:text-purple-300">Services</a>
     <a href="careers.html" class="block text-black font-medium hover:text-purple-300">Careers</a>
     <a href="about.html" class="block text-black font-medium hover:text-purple-300">About</a>
-    <a href="blog.html" class="block text-black font-medium hover:text-purple-300">Blog</a>
+    <a href="blog.html" class="block text-purple-500 font-bold hover:text-purple-300">Blog</a>
     <a href="contact.html">
     <button class="w-full bg-[#151a37] text-white text-sm px-5 py-2 rounded-full font-medium transition">
       Contact Us
@@ -89,87 +93,158 @@
 
 
 
-<!-- Contact Page Intro Section -->
+
+
 <section class="w-full bg-[#151a37] text-white h-[400px] px-6 sm:px-12 md:px-24">
   <div class="max-w-7xl mx-auto h-full flex flex-col justify-center">
-    <h1 class="text-4xl sm:text-5xl font-bold mb-4">Contact Us</h1>
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4">Our Blog</h1>
     <p class="text-base sm:text-lg text-gray-300 max-w-2xl">
-      Have questions, ideas, or just want to say hello? We’d love to hear from you. Let’s work together and make something amazing.
+      Discover insights, tips, and stories on technology, business, and creativity. Stay updated with the latest trends and expert advice from our team.
     </p>
   </div>
 </section>
 
-<!-- Contact Section -->
-<section class="relative w-full py-24 px-6 md:px-20 overflow-hidden">
-  <!-- Faded Background Heading -->
-  <h2 class="text-6xl md:text-6xl font-bold text-gray-200 absolute top-10 left-6 md:left-24 z-0 select-none uppercase leading-none">
-    Contact
+<section class=" text-gray-200 px-4 py-16">
+  <div class="max-w-7xl mx-auto">
+    <!-- Heading Section -->
+    <div class="mb-12 text-center md:text-left">
+  <h2 class="text-6xl font-bold text-gray-200 uppercase">
+    Inside<br>
+    Our Tech Space
   </h2>
+  <p class="text-gray-400 mt-4 max-w-xl text-sm md:text-base">
+    Stay updated with the latest innovations, development stories, and technology insights from our team.
+  </p>
+</div>
 
-  <!-- Content Grid: Form + Image -->
-  <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-    
-    <!-- Left Column: Form -->
-    <div class="flex flex-col space-y-10 mt-10">
-      <p class="text-gray-700 text-md">
-        Let’s connect — We’re here to help you move forward.
-      </p>
 
-      <form class="space-y-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <input type="text" placeholder="Your Name" class="w-full border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#151a37]" />
-          <input type="email" placeholder="Email Address" class="w-full border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#151a37]" />
-        </div>
-        <input type="text" placeholder="Subject" class="w-full border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#151a37]" />
-        <textarea placeholder="Your Message" rows="4" class="w-full border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#151a37]"></textarea>
-        <button type="submit" class="bg-[#151a37] text-white px-6 py-3 rounded-md hover:bg-[#1f254f] transition">
-          Send Message
-        </button>
-      </form>
-    </div>
-
-    <!-- Right Column: Image -->
-    <div class="rounded-xl overflow-hidden shadow-lg mt-28 lg:mt-24">
-      <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg" alt="Contact illustration" class="w-full h-auto object-cover rounded-xl hover:scale-105 transition-transform duration-500" />
+    <!-- Cards Grid -->
+   <!-- Blog Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 md:px-20">
+  <!-- Repeated Card -->
+  <div class="bg-[#121525] rounded-xl overflow-hidden shadow-lg" onclick="openBlogModal(0)">
+    <img src="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg" alt="Design Trend" class="w-full h-64 object-cover" />
+    <div class="p-5">
+      <span class="inline-block bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-full mb-3">Design Insights</span>
+      <p class="text-gray-500 text-xs mb-2">June 25, 2025</p>
+      <h3 class="text-lg font-semibold mb-2">Trends in Modern Design</h3>
+      <p class="text-gray-400 text-sm mb-4">Discover the latest trends shaping modern design studios and how they can elevate.</p>
+      <button class="inline-block text-sm font-medium text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-700 transition">
+        Read More ↗
+      </button>
     </div>
   </div>
 
-  <!-- Contact Info Row -->
-  <div class="relative z-10 max-w-7xl mx-auto mt-20">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
-
-      <!-- Phone -->
-      <div class="flex flex-col items-center md:items-start gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#151a37" d="m19.23 15.26l-2.54-.29a1.99 1.99 0 0 0-1.64.57l-1.84 1.84a15.05 15.05 0 0 1-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52a2 2 0 0 0-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07c.53 8.54 7.36 15.36 15.89 15.89c1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98" stroke-width="0.5" stroke="#151a37"/></svg>
-        <p class="font-semibold text-gray-800">Phone</p>
-        <p class="text-gray-600 text-sm">+91 98765 43210</p>
-      </div>
-
-      <!-- Email -->
-      <div class="flex flex-col items-center md:items-start gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#151a37" d="M20 4a2 2 0 0 1 1.995 1.85L22 6v12a2 2 0 0 1-1.85 1.995L20 20H4a2 2 0 0 1-1.995-1.85L2 18V6a2 2 0 0 1 1.85-1.995L4 4zm0 3.414l-6.94 6.94a1.5 1.5 0 0 1-2.12 0L4 7.414V18h16zM18.586 6H5.414L12 12.586z" stroke-width="0.5" stroke="#151a37"/></g></svg>
-        <p class="font-semibold text-gray-800">Email</p>
-        <p class="text-gray-600 text-sm">contact@yourdomain.com</p>
-      </div>
-
-      <!-- Offices -->
-      <div class="flex flex-col items-center md:items-start gap-2">
-       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#151a37" fill-rule="evenodd" d="M8.25 9a3.75 3.75 0 1 1 7.5 0a3.75 3.75 0 0 1-7.5 0M12 6.75a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5" clip-rule="evenodd" stroke-width="0.5" stroke="#151a37"/><path fill="#151a37" fill-rule="evenodd" d="M5.456 8.127a6.403 6.403 0 0 1 6.382-5.877h.324a6.403 6.403 0 0 1 6.382 5.877a6.9 6.9 0 0 1-1.534 4.931l-3.595 4.397a1.828 1.828 0 0 1-2.83 0L6.99 13.058a6.9 6.9 0 0 1-1.534-4.93m6.382-4.377a4.903 4.903 0 0 0-4.887 4.5a5.4 5.4 0 0 0 1.2 3.859l3.595 4.396c.131.16.377.16.508 0l3.595-4.396a5.4 5.4 0 0 0 1.2-3.859a4.903 4.903 0 0 0-4.887-4.5z" clip-rule="evenodd" stroke-width="0.5" stroke="#151a37"/><path fill="#151a37" d="M7.67 16.335a.75.75 0 1 0-1.34-.67l-2 4A.75.75 0 0 0 5 20.75h14a.75.75 0 0 0 .67-1.085l-2-4a.75.75 0 1 0-1.34.67l1.457 2.915H6.214z" stroke-width="0.5" stroke="#151a37"/></svg>
-        <p class="font-semibold text-gray-800">Offices</p>
-        <p class="text-gray-600 text-sm">
-          <span class="block">Kochi: 123 Tech Park, Kerala</span>
-          <span class="block">Bangalore: 45 Innovation Street, Karnataka</span>
-          <span class="block">Gurgaon: 789 Sector 22, Haryana</span>
-        </p>
-      </div>
-
+  <div class="bg-[#121525] rounded-xl overflow-hidden shadow-lg" onclick="openBlogModal(1)">
+    <img src="https://img.freepik.com/free-photo/close-up-person-working-home-night_23-2149090964.jpg" alt="Minimalist" class="w-full h-64 object-cover" />
+    <div class="p-5">
+      <span class="inline-block bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-full mb-3">Design Tips</span>
+      <p class="text-gray-500 text-xs mb-2">June 22, 2025</p>
+      <h3 class="text-lg font-semibold mb-2">Power of Minimalist Design</h3>
+      <p class="text-gray-400 text-sm mb-4">Learn how minimalist design can create impactful and clean experiences.</p>
+      <button class="inline-block text-sm font-medium text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-700 transition">
+        Read More ↗
+      </button>
     </div>
+  </div>
+
+  <div class="bg-[#121525] rounded-xl overflow-hidden shadow-lg" onclick="openBlogModal(2)">
+    <img src="https://img.freepik.com/free-photo/indian-woman-working-laptop-street-cafe-wearing-stylish-smart-clothes-jacket-glasses_1157-48457.jpg" alt="Sustainable" class="w-full h-64 object-cover" />
+    <div class="p-5">
+      <span class="inline-block bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-full mb-3">Design Tips</span>
+      <p class="text-gray-500 text-xs mb-2">June 18, 2025</p>
+      <h3 class="text-lg font-semibold mb-2">Sustainable Design for Studios</h3>
+      <p class="text-gray-400 text-sm mb-4">Explore how studios can adopt sustainable practices to create projects.</p>
+      <button class="inline-block text-sm font-medium text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-700 transition">
+        Read More ↗
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="blogModal" class="fixed inset-0 z-50 bg-black/70 flex items-center justify-center hidden">
+  <div class="bg-white text-black max-w-4xl w-[95%] md:w-[80%] rounded-lg shadow-lg p-8 relative overflow-y-auto max-h-[90vh]">
+    
+    <button onclick="closeBlogModal()" class="absolute top-2 right-3 text-2xl font-bold text-gray-600 hover:text-black">&times;</button>
+
+    <!-- Image Section -->
+    <img id="modalImage" src="" alt="Blog Image" class="w-full h-64 object-cover rounded mb-6" />
+
+    <!-- Blog Title -->
+    <h3 id="modalTitle" class="text-2xl font-bold mb-2"></h3>
+
+    <!-- Blog Date -->
+    <p id="modalDate" class="text-sm text-gray-500 mb-4"></p>
+
+    <!-- Blog Content -->
+    <p id="modalContent" class="text-gray-700 leading-relaxed text-sm"></p>
+  </div>
+</div>
+
+
+<script>
+  const blogs = [
+  {
+    title: "Trends in Modern Design",
+    date: "June 25, 2025",
+    image: "https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg",
+    content: `Discover the latest trends shaping modern design studios...` // Keep the long HTML content
+  },
+  {
+    title: "Power of Minimalist Design",
+    date: "June 22, 2025",
+    image: "https://img.freepik.com/free-photo/close-up-person-working-home-night_23-2149090964.jpg",
+    content: "Minimalist design is more than aesthetics..."
+  },
+  {
+    title: "Sustainable Design for Studios",
+    date: "June 18, 2025",
+    image: "https://img.freepik.com/free-photo/indian-woman-working-laptop-street-cafe_1157-48457.jpg",
+    content: "Sustainability in design isn’t just a trend..."
+  }
+];
+
+
+ function openBlogModal(index) {
+  document.getElementById('modalTitle').innerText = blogs[index].title;
+  document.getElementById('modalDate').innerText = blogs[index].date;
+  document.getElementById('modalImage').src = blogs[index].image;
+  document.getElementById('modalContent').innerHTML = blogs[index].content; // Use innerHTML for <br> etc.
+  document.getElementById('blogModal').classList.remove('hidden');
+}
+
+
+  function closeBlogModal() {
+    document.getElementById('blogModal').classList.add('hidden');
+  }
+</script>
+
   </div>
 </section>
 
 
 
-<!-- Top Colored Line -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="w-full h-1 bg-[#151a37]"></div>
 
 <footer class="bg-white text-gray-300 pt-20 pb-2 px-6 md:px-20 min-h-[400px]">

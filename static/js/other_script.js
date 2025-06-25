@@ -99,3 +99,86 @@ const toggleBtn = document.getElementById('menu-toggle');
 
 
 
+
+
+
+
+
+   const jobs = [
+    { label: 'fresher', title: 'Frontend Developer', exp: '0–1 years', tags: ['HTML', 'CSS', 'JavaScript'] },
+    { label: 'experienced', title: 'Backend Engineer', exp: '3–5 years', tags: ['Python', 'Django', 'REST API'] },
+    { label: 'internship', title: 'UI/UX Design Intern', exp: 'N/A', tags: ['Figma', 'Wireframing'] },
+    { label: 'fresher', title: 'QA Tester', exp: '0–1 years', tags: ['Selenium', 'Manual Testing'] },
+  ];
+
+  let currentJobs = [];
+let jobsVisible = false; // <-- Toggle flag
+
+function filterJobs(category = 'all', button = null) {
+  const jobsSection = document.getElementById('jobs');
+  const container = document.getElementById('jobCards');
+  const noResults = document.getElementById('noResults');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  // Toggle visibility
+  jobsVisible = !jobsVisible;
+  jobsSection.style.display = jobsVisible ? 'block' : 'none';
+
+  // If hiding, no need to render cards
+  if (!jobsVisible) return;
+
+  // Highlight filter button
+  buttons.forEach(btn => btn.classList.remove('ring-2', 'ring-green-600'));
+  if (button) button.classList.add('ring-2', 'ring-green-600');
+
+  // Filter jobs
+  container.innerHTML = '';
+  currentJobs = category === 'all' ? jobs : jobs.filter(j => j.label === category);
+
+  // Render cards or show "no results"
+  if (currentJobs.length === 0) {
+    noResults.classList.remove('hidden');
+  } else {
+    noResults.classList.add('hidden');
+    currentJobs.forEach((job, index) => {
+      const tagsHTML = job.tags.map(tag =>
+        `<span class='bg-gray-100 text-xs px-2 py-1 rounded'>${tag}</span>`).join(' ');
+      container.innerHTML += `
+        <div class="bg-white shadow-md rounded-xl p-6 border">
+          <span class="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-2">${job.label.charAt(0).toUpperCase() + job.label.slice(1)}</span>
+          <h4 class="text-xl font-semibold text-gray-800 mb-1">${job.title}</h4>
+          <p class="text-sm text-gray-600 mb-2">Experience: ${job.exp}</p>
+          <div class="flex flex-wrap gap-2 mb-4">${tagsHTML}</div>
+          <button onclick='showDetails(${index})' class="text-sm font-medium text-green-700 hover:underline">View Details</button>
+        </div>`;
+    });
+  }
+}
+
+  function showDetails(index) {
+    const job = currentJobs[index]; // <-- get job from filtered set
+    document.getElementById('modalTitle').innerText = job.title;
+    document.getElementById('modalLabel').innerText = job.label;
+    document.getElementById('modalTags').innerHTML = job.tags.map(tag =>
+      `<span class='bg-gray-100 text-xs px-2 py-1 rounded'>${tag}</span>`).join(' ');
+    document.getElementById('jobModal').classList.remove('hidden');
+
+    document.getElementById('formPosition').value = job.title;
+    document.getElementById('formLabel').value = job.label;
+  }
+
+  function closeModal() {
+    document.getElementById('jobModal').classList.add('hidden');
+  }
+
+  function openForm() {
+    document.getElementById('jobModal').classList.add('hidden');
+    document.getElementById('formModal').classList.remove('hidden');
+  }
+
+  function closeForm() {
+    document.getElementById('formModal').classList.add('hidden');
+  }
+
+
+
