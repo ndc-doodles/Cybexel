@@ -2,7 +2,8 @@ const toggleBtn = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 
 // Toggle menu when button is clicked
-toggleBtn.addEventListener('click', () => {
+toggleBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // Prevent the event from bubbling to the document
   mobileMenu.classList.toggle('translate-x-full');
   mobileMenu.classList.toggle('translate-x-0');
 });
@@ -19,6 +20,7 @@ document.addEventListener('click', (event) => {
     }
   }
 });
+
 
 
 
