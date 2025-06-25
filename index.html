@@ -28,46 +28,49 @@
 <div id="navbar-container" class="w-full flex justify-center fixed top-0 z-[9999] transition-all duration-300">
   <nav class="w-full max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
     
-    <a href="index.html">
-    <div class="flex items-center">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center">
       <img src="./static/images/logo1.jpg" alt="Wise Logo" class="w-24 h-auto" />
-    </div>
-</a>
-   <div class="hidden md:flex items-center gap-8 text-base text-black font-semibold drop-shadow-sm">
-<a href="index.html" class="text-purple-500 font-bold hover:text-purple-300 transition">Home</a>
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-8 text-base text-black font-semibold drop-shadow-sm">
+      <a href="index.html" class="text-purple-500 font-bold hover:text-purple-300 transition">Home</a>
       <a href="services.html" class="hover:text-purple-300 transition">Services</a>
       <a href="careers.html" class="hover:text-purple-300 transition">Careers</a>
       <a href="about.html" class="hover:text-purple-300 transition">About</a>
       <a href="blog.html" class="hover:text-purple-300 transition">Blog</a>
     </div>
 
-    <div class="md:hidden">
-      <button id="menu-toggle" class="text-black focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Mobile Toggle + Contact Button -->
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="hidden md:inline-block">
+        <button class="bg-[#151a37] text-white text-sm px-5 py-2 rounded-full font-medium transition">
+          Contact Us
+        </button>
+      </a>
+      <button id="menu-toggle" class="md:hidden text-black focus:outline-none pr-2">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
-<a href="contact.html">
-    <button class="bg-[#151a37] text-white text-sm px-5 py-2 rounded-full font-medium transition hidden md:block">
-      <p>Contact Us</p>
-    </button>
-    </a>
   </nav>
 </div>
 
+<!-- Mobile Menu -->
 <div id="mobile-menu"
-     class="md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg px-6 py-10 space-y-6 transform translate-x-full transition-transform duration-300 ease-in-out z-[9998]">
-  <a href="index.html" class="text-purple-500 font-bold  hover:text-purple-300">Home</a>
+     class="md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg px-6 py-10 space-y-6 transform translate-x-full transition-transform duration-300 ease-in-out z-[9999] overflow-y-auto">
+  <a href="index.html" class="text-purple-500 font-bold hover:text-purple-300 block">Home</a>
   <a href="services.html" class="block text-black font-medium hover:text-purple-300">Services</a>
   <a href="careers.html" class="block text-black font-medium hover:text-purple-300">Careers</a>
   <a href="about.html" class="block text-black font-medium hover:text-purple-300">About</a>
   <a href="blog.html" class="block text-black font-medium hover:text-purple-300">Blog</a>
-  <a href="contact.html">
-  <button class="w-full bg-[#151a37] text-white text-sm px-5 py-2 rounded-full font-medium transition">
-   Contact Us
-  </button>
+  <a href="contact.html" class="block">
+    <button class="w-full bg-[#151a37] text-white text-sm px-5 py-2 rounded-full font-medium transition">
+      Contact Us
+    </button>
   </a>
 </div>
 

@@ -36,57 +36,63 @@
 <header class="relative z-[9999] w-full">
   <nav id="navbar"
        class="fixed top-0 left-0 w-full bg-transparent px-4 py-6 transition-all duration-300 z-[9999] backdrop-blur-sm">
-    
-    <!-- Container to center the content -->
+
     <div class="max-w-7xl mx-auto flex justify-between items-center">
-      
+
       <!-- Logo -->
-     <a href="index.html">
-      <div class="flex items-center">
+      <a href="index.html" class="flex items-center">
         <img src="./static/images/logo1.jpg" alt="Wise Logo" class="w-24 h-auto" />
-      </div>
       </a>
 
-      <!-- Desktop Links -->
+      <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center gap-8 text-base font-semibold nav-links text-white">
         <a href="index.html" class="nav-link hover:text-purple-300 transition">Home</a>
         <a href="services.html" class="nav-link hover:text-purple-300 transition">Services</a>
         <a href="careers.html" class="nav-link hover:text-purple-300 transition">Careers</a>
-        <a href="about.html" class="nav-link hover:text-purple-300 transition text-purple-500 font-bold">About</a>
+        <a href="about.html" class="nav-link text-purple-500 font-bold hover:text-purple-300 transition">About</a>
         <a href="blog.html" class="nav-link hover:text-purple-300 transition">Blog</a>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="focus:outline-none">
-          <svg id="menu-icon" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
-               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
+      <!-- Right Side: Contact Us + Mobile Menu Toggle -->
+      <div class="flex items-center gap-4">
+        <!-- Desktop Contact Us -->
+        <a href="contact.html" class="hidden md:inline-block">
+          <button class="bg-white text-[#151a37] text-sm px-5 py-2 rounded-full font-medium transition">
+            Contact Us
+          </button>
+        </a>
 
-      <a href="contact.html">
-      <button id="enquire-btn"
-              class="bg-white text-[#151a37] text-sm px-5 py-2 rounded-full font-medium transition hidden md:block">
-       Contact Us
-      </button>
-      </a>
+        <!-- Mobile Menu Button -->
+<div class="md:hidden">
+  <button id="menu-toggle" class="focus:outline-none">
+    <svg id="menu-icon" class="w-6 h-6 text-white transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</div>
+
+      </div>
     </div>
   </nav>
 
   <!-- Mobile Menu -->
   <div id="mobile-menu"
-       class="md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg px-6 py-10 space-y-6 transform translate-x-full transition-transform duration-300 ease-in-out z-[9998]">
+       class="md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg px-6 py-10 space-y-6 transform translate-x-full transition-transform duration-300 ease-in-out z-[9999]">
+
+    <!-- Optional Close Button -->
+    <!-- <button onclick="closeMenu()" class="absolute top-4 right-4 text-2xl text-black font-bold">&times;</button> -->
+
     <a href="index.html" class="block text-black font-medium hover:text-purple-300">Home</a>
     <a href="services.html" class="block text-black font-medium hover:text-purple-300">Services</a>
     <a href="careers.html" class="block text-black font-medium hover:text-purple-300">Careers</a>
     <a href="about.html" class="block text-purple-500 font-bold hover:text-purple-300">About</a>
     <a href="blog.html" class="block text-black font-medium hover:text-purple-300">Blog</a>
+
     <a href="contact.html">
-    <button class="w-full bg-[#151a37] text-white text-sm px-5 py-2 rounded-full font-medium transition">
-      Contact Us
-    </button>
+      <button class="w-full bg-[#151a37] mt-4 text-white text-sm px-5 py-2 rounded-full font-medium transition">
+        Contact Us
+      </button>
     </a>
   </div>
 </header>
@@ -101,16 +107,13 @@ We create impactful digital experiences that help businesses grow through innova
 </section>
 
 <section class="bg-white py-20 px-6 sm:px-12 md:px-24 text-[#151a37]">
-  <!-- Breadcrumb & Heading -->
   <div class="max-w-7xl mx-auto">
-    <!-- <div class="text-sm mb-4">
-      <span class="text-gray-500">[Home / </span><span class="text-yellow-500 font-medium">About]</span>
-    </div> -->
-
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <!-- Text -->
-      <div>
-        <h2 class="text-6xl font-bold mb-4 text-gray-200 uppercase   leading-tight">Shaping Excellence</h2>
+      <div class="text-center md:text-left">
+        <h2 class=" text-4xl  md:text-6xl font-bold mb-4 text-gray-200 uppercase leading-tight">
+          Shaping Excellence
+        </h2>
         <p class="text-gray-600 leading-relaxed mb-6">
           At Cybexel we believe in the power of collaboration to achieve outstanding results. With a team of skilled professionals and a commitment to quality, we work hand-in-hand with our clients to bring their ideas to life. Together, we create solutions that stand the test of time.
         </p>
@@ -118,39 +121,39 @@ We create impactful digital experiences that help businesses grow through innova
 
       <!-- Image -->
       <div class="relative w-full rounded-xl overflow-hidden">
-        <img src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15773.jpg?uid=R181481712&ga=GA1.1.1134808614.1740556455&semt=ais_hybrid&w=740" alt="Team at Work" class="rounded-xl shadow-lg object-cover w-full h-full" />
+        <img src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15773.jpg?uid=R181481712&ga=GA1.1.1134808614.1740556455&semt=ais_hybrid&w=740" alt="Team at Work" class="rounded-xl shadow-lg object-cover w-full h-auto max-h-[400px] sm:max-h-full" />
       </div>
     </div>
 
     <!-- Intro Paragraph -->
-    <div class="text-center mt-16 max-w-4xl mx-auto">
-      <p class="text-lg text-gray-700 leading-relaxed">
+    <div class="text-center mt-16 max-w-4xl mx-auto px-2">
+      <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
         At Cybexel we are committed to revolutionizing the tech industry with innovative, scalable and cost-effective digital solutions. With a proven track record of delivering exceptional projects, we combine <span class="font-semibold text-[#151a37]">cutting-edge technology</span>, <span class="italic">skilled expertise</span>, and <span class="underline decoration-dotted">client-centric approaches</span> to bring ideas to life.
       </p>
     </div>
 
     <!-- Stats -->
-   <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center mt-12">
-  <div>
-    <h3 class="counter text-3xl font-bold text-[#151a37]" data-target="150">0</h3>
-    <p class="text-sm text-gray-500 mt-1">Projects Delivered</p>
-  </div>
-  <div>
-    <h3 class="counter text-3xl font-bold text-[#151a37]" data-target="100">0</h3>
-    <p class="text-sm text-gray-500 mt-1">Team Members</p>
-  </div>
-  <div>
-    <h3 class="counter text-3xl font-bold text-[#151a37]" data-target="12">0</h3>
-    <p class="text-sm text-gray-500 mt-1">Years of Experience</p>
-  </div>
-  <div>
-    <h3 class="counter text-3xl font-bold text-[#151a37]" data-target="150">0</h3>
-    <p class="text-sm text-gray-500 mt-1">Happy Clients</p>
-  </div>
-</div>
-
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center mt-12">
+      <div>
+        <h3 class="counter text-2xl sm:text-3xl font-bold text-[#151a37]" data-target="150">0</h3>
+        <p class="text-sm text-gray-500 mt-1">Projects Delivered</p>
+      </div>
+      <div>
+        <h3 class="counter text-2xl sm:text-3xl font-bold text-[#151a37]" data-target="100">0</h3>
+        <p class="text-sm text-gray-500 mt-1">Team Members</p>
+      </div>
+      <div>
+        <h3 class="counter text-2xl sm:text-3xl font-bold text-[#151a37]" data-target="12">0</h3>
+        <p class="text-sm text-gray-500 mt-1">Years of Experience</p>
+      </div>
+      <div>
+        <h3 class="counter text-2xl sm:text-3xl font-bold text-[#151a37]" data-target="150">0</h3>
+        <p class="text-sm text-gray-500 mt-1">Happy Clients</p>
+      </div>
+    </div>
   </div>
 </section>
+
 
 
 
@@ -216,7 +219,7 @@ We create impactful digital experiences that help businesses grow through innova
 
     <!-- Left: Features -->
     <div class="space-y-6">
-      <h2 class="text-6xl font-bold text-gray-200 uppercase mb-12">
+      <h2 class="text-4xl md:text-6xl font-bold text-gray-200 uppercase mb-12 ">
         Why Choose Us?
       </h2>
 

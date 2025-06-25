@@ -1,47 +1,68 @@
 const toggleBtn = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const navbar = document.getElementById('navbar');
-  const enquireBtn = document.getElementById('enquire-btn');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const menuIcon = document.getElementById('menu-icon');
+const mobileMenu = document.getElementById('mobile-menu');
+const navbar = document.getElementById('navbar');
+const enquireBtn = document.getElementById('enquire-btn');
+const navLinks = document.querySelectorAll('.nav-link');
+const menuIcon = document.getElementById('menu-icon');
 
-  toggleBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('translate-x-full');
-    mobileMenu.classList.toggle('translate-x-0');
+// Toggle mobile menu open/close
+toggleBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // Prevent immediate close from document click
+  mobileMenu.classList.toggle('translate-x-full');
+  mobileMenu.classList.toggle('translate-x-0');
+});
+
+// Close mobile menu when clicking outside
+window.addEventListener('click', (e) => {
+  if (
+    !mobileMenu.contains(e.target) &&
+    !toggleBtn.contains(e.target) &&
+    !e.target.closest('#menu-icon')
+  ) {
+    mobileMenu.classList.add('translate-x-full');
+    mobileMenu.classList.remove('translate-x-0');
+  }
+});
+
+// Scroll behavior for navbar styles
+// Scroll behavior for navbar styles
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+  navbar.classList.add('bg-white/30', 'backdrop-blur-md', 'shadow-md', 'text-black');
+  navbar.classList.remove('text-white');
+
+  if (enquireBtn) {
+    enquireBtn.classList.remove('bg-white', 'text-[#151a37]');
+    enquireBtn.classList.add('bg-[#151a37]', 'text-white');
+  }
+
+  navLinks.forEach(link => {
+    link.classList.remove('text-white');
+    link.classList.add('text-black');
   });
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('bg-white/30', 'backdrop-blur-md', 'shadow-md', 'text-black');
-      navbar.classList.remove('text-white');
+  menuIcon.classList.remove('text-white');
+  menuIcon.classList.add('text-black');
 
-      enquireBtn.classList.remove('bg-white', 'text-[#151a37]');
-      enquireBtn.classList.add('bg-[#151a37]', 'text-white');
+} else {
+  navbar.classList.remove('bg-white/30', 'backdrop-blur-md', 'shadow-md', 'text-black');
+  navbar.classList.add('text-white');
 
-      navLinks.forEach(link => {
-        link.classList.remove('text-white');
-        link.classList.add('text-black');
-      });
+  if (enquireBtn) {
+    enquireBtn.classList.add('bg-white', 'text-[#151a37]');
+    enquireBtn.classList.remove('bg-[#151a37]', 'text-white');
+  }
 
-      menuIcon.classList.remove('text-white');
-      menuIcon.classList.add('text-black');
-    } else {
-      navbar.classList.remove('bg-white/30', 'backdrop-blur-md', 'shadow-md', 'text-black');
-      navbar.classList.add('text-white');
-
-      enquireBtn.classList.add('bg-white', 'text-[#151a37]');
-      enquireBtn.classList.remove('bg-[#151a37]', 'text-white');
-
-      navLinks.forEach(link => {
-        link.classList.add('text-white');
-        link.classList.remove('text-black');
-      });
-
-      menuIcon.classList.add('text-white');
-      menuIcon.classList.remove('text-black');
-    }
+  navLinks.forEach(link => {
+    link.classList.add('text-white');
+    link.classList.remove('text-black');
   });
 
+  menuIcon.classList.add('text-white');
+  menuIcon.classList.remove('text-black');
+}
+
+});
 
 
 

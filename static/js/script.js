@@ -1,10 +1,25 @@
- const toggleBtn = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+const toggleBtn = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
 
-  toggleBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('translate-x-full');
-    mobileMenu.classList.toggle('translate-x-0');
-  });
+// Toggle menu when button is clicked
+toggleBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('translate-x-full');
+  mobileMenu.classList.toggle('translate-x-0');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (event) => {
+  const isClickInsideMenu = mobileMenu.contains(event.target);
+  const isClickOnToggle = toggleBtn.contains(event.target);
+
+  if (!isClickInsideMenu && !isClickOnToggle) {
+    if (!mobileMenu.classList.contains('translate-x-full')) {
+      mobileMenu.classList.add('translate-x-full');
+      mobileMenu.classList.remove('translate-x-0');
+    }
+  }
+});
+
 
 
 
