@@ -18,8 +18,33 @@
 
 
 
+<style>
+    .clip-left {
+      clip-path: ellipse(70% 80% at 50% 50%);
+    }
 
+    .clip-right {
+      clip-path: path("M0,0 Q0,100 100,100 L100,0 Z"); /* fallback for mask */
+      mask-image: radial-gradient(ellipse 80% 100% at center, black 100%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 100% at center, black 100%, transparent 100%);
+      mask-size: cover;
+      -webkit-mask-size: cover;
+      border-radius: 50% 50% 0 50% / 50% 50% 0 50%;
+    }
 
+    .dot {
+      width: 20px;
+      height: 40px;
+      background-color: #7B61FF;
+      border-radius: 9999px;
+    }
+  </style>
+ <style>
+    .highlight {
+      background:#151a37;
+      color:white;
+    }
+  </style>
 </head>
 <body class="relative min-h-screen">
 
@@ -55,10 +80,12 @@
       <!-- Mobile Toggle + Contact -->
       <div class="flex items-center gap-4">
         <a href="contact.html" class="hidden md:inline-block">
-          <button class="bg-white text-[#151a37] text-sm px-5 py-2 rounded-full font-medium transition">
+          <button id="enquire-btn"
+            class="bg-white text-[#151a37] text-sm px-5 py-2 rounded-full font-medium transition">
             Contact Us
           </button>
         </a>
+
 
         <div class="md:hidden">
   <button id="menu-toggle" class="focus:outline-none">
@@ -106,19 +133,40 @@ Be part of a team that values your ideas. Grow with us through innovation, colla
 
 
 
+<section class="relative">
+  <!-- Background Image -->
+  <img src="./static/images/careers2.jpg" 
+       alt="Creative meeting" 
+       class="w-full object-cover h-[500px] sm:h-[400px] md:h-[500px]"/>
+
+  <!-- Floating Text Box -->
+  <div class="absolute bottom-0 right-0 bg-white p-4 sm:p-6 md:p-10 max-w-full sm:max-w-md md:max-w-xl w-full sm:w-auto">
+    <p class="text-base sm:text-lg md:text-xl font-medium leading-relaxed text-black">
+      A fulfilling career needs both:
+      <span class="highlight font-semibold">room to grow and a clear direction</span>.
+      We’ve built a workspace that balances innovation with purpose — and now we invite you to build your future with us.
+    </p>
+
+    <a href="#start">
+      <button class="mt-4 sm:mt-6 bg-black text-white py-2 px-5 sm:px-6 rounded-full text-sm hover:bg-gray-900 transition">
+        • Sure, let's start!
+      </button>
+    </a>
+  </div>
+</section>
 
 
+<div id="start"></div>
 
-
-<section class="max-w-7xl mx-auto px-4 py-16 space-y-10">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+<!-- <section class="max-w-7xl mx-auto px-4 py-16 mt-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
     <div>
       <h2 class="text-6xl md:text-7xl font-semibold text-gray-200 uppercase leading-snug">
-       Grow With Us
+        Grow With Us
       </h2>
     </div>
     <div>
-      <p class="text-gray-600 text-sm leading-relaxed">
+      <p class="text-gray-600 text-base leading-relaxed">
         Individual perspectives and experiences improve us and our business; there is no such thing as a “typical” fundname employee.
         We are a hybrid of sneakers and suits, combining the best ideas from the tech and financial sectors.
         We encourage everyone to express their opinions while remaining humble enough to listen to and accept other points of view.
@@ -126,92 +174,66 @@ Be part of a team that values your ideas. Grow with us through innovation, colla
     </div>
   </div>
 
- 
+  <div class="relative grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div class="relative z-10 md:mt-20">
+      <img src="https://img.freepik.com/free-photo/team-meeting-modern-office_23-2151944858.jpg"
+           alt="Team"
+           class="rounded-xl shadow-xl w-full h-[500px] object-cover" />
+    </div>
 
-<div class="max-w-7xl mx-auto p-2">
-  <div class="grid grid-cols-4 gap-3">
-    <img src="https://img.freepik.com/free-photo/team-meeting-modern-office_23-2151944858.jpg"
-         alt="Top Left"
-         class="col-span-2 w-full h-96 object-cover rounded-xl" />
-
-    <img src="https://img.freepik.com/free-photo/group-young-people-working-together_23-2148499842.jpg"
-         alt="Top Right"
-         class="col-span-2 w-full h-96 object-cover rounded-xl" />
-
-    <img src="https://img.freepik.com/free-photo/guy-shows-document-girl-group-young-freelancers-office-have-conversation-working_146671-13569.jpg"
-         alt="Bottom Left"
-         class="col-span-3 w-full h-96 object-cover rounded-xl" />
-
-    <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241213.jpg"
-         alt="Bottom Right"
-         class="col-span-1 w-full h-96 object-cover rounded-xl" />
+    <div class="relative md:-mt-20 md:-ml-20 z-20">
+      <img src="https://img.freepik.com/free-photo/group-young-people-working-together_23-2148499842.jpg"
+           alt="Culture"
+           class="rounded-xl shadow-2xl w-full h-[450px] object-cover" />
+    </div>
   </div>
-</div>
+</section> -->
 
-
-
-
-
-
-
-
-</section>
 
 <div id="Opportunities"></div>
 
 
-<section class="w-full px-4 py-12 max-md:py-0">
+<section class="w-full px-4 py-12 max-md:py-0 mt-20">
   <!-- Heading at the Top -->
-  <h2 class="text-6xl md:text-7xl font-bold text-gray-200 uppercase mb-10 sm:ml-10 md:ml-28 select-none tracking-wide text-center md:text-left">
+  <h2 class="text-6xl md:text-7xl font-bold text-gray-200 uppercase mb-4 sm:ml-10 md:ml-28 select-none tracking-wide text-center md:text-left">
     JOIN WITH US
   </h2>
+  <p class="text-gray-400 text-lg md:text-xl sm:ml-10 md:ml-28 mb-10 text-center md:text-left max-w-4xl">
+    Discover opportunities tailored for students, freshers, and experienced professionals. Apply now and take your next step with us!
+  </p>
 
-  <!-- Main Flex Layout: Image + Cards -->
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 items-center md:items-start">
-
-    <!-- Left Side: Image + Floating Text -->
-    <div class="relative w-full md:w-[80%] flex justify-center">
+  <!-- Main Column Layout: Image + Tab Buttons below -->
+  <div class="max-w-7xl mx-auto flex flex-col gap-6 items-center">
+    
+    <!-- Image -->
+    <div class="relative w-full md:w-[80%]">
       <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786"
         alt="Office Team"
-        class="w-full sm:w-[90%] md:w-[70%] h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-xl" />
-
-      <!-- Floating Card -->
-      <div class="absolute top-1/2 left-1/2 md:left-[70%] transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-lg rounded-xl p-4 sm:p-6 md:p-8 max-w-sm w-[85%] sm:w-[75%] md:w-[90%]">
-        <!-- <p class="text-gray-500 text-sm mb-2">200 roles in 40 locations</p> -->
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 leading-snug mb-4 text-center">
-          Explore<br />
-          career paths<br />
-          with us
-        </h2>
-        <button onclick="filterJobs('all')" class="bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-md font-medium w-full">
-          Explore Roles
-        </button>
-      </div>
+        class="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-xl" />
     </div>
 
-    <!-- Right Side: 3 Square Filter Buttons -->
-    <div class="w-full md:w-[25%] flex flex-col justify-center gap-4 px-2">
-      <button onclick="filterJobs('internship', this)" class="filter-btn bg-[#30bfe9]/20 shadow-md rounded-xl h-[120px] sm:h-[140px] md:h-[150px] flex items-center justify-center text-center">
-        <h3 class="text-base sm:text-lg font-semibold text-gray-800">Internship / Students</h3>
-      </button>
-      <button onclick="filterJobs('fresher', this)" class="filter-btn bg-[#9bca51]/20 shadow-md rounded-xl h-[120px] sm:h-[140px] md:h-[150px] flex items-center justify-center text-center">
-        <h3 class="text-base sm:text-lg font-semibold text-gray-800">Fresher</h3>
-      </button>
-      <button onclick="filterJobs('experienced', this)" class="filter-btn bg-[#e3d544]/50 shadow-md rounded-xl h-[120px] sm:h-[140px] md:h-[150px] flex items-center justify-center text-center">
-        <h3 class="text-base sm:text-lg font-semibold text-gray-800">Experienced</h3>
-      </button>
+    <!-- Tab Buttons -->
+    <div class="w-full md:w-[70%]">
+      <div class=" rounded-xl p-4">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <button onclick="filterJobs('all', this)" class="filter-btn py-3 px-4 rounded-lg font-semibold bg-gray-100 hover:ring-2 hover:ring-gray-300">All Jobs</button>
+          <button onclick="filterJobs('internship', this)" class="filter-btn py-3 px-4 rounded-lg font-semibold bg-[#30bfe9]/20 hover:ring-2 hover:ring-[#30bfe9]">Internship</button>
+          <button onclick="filterJobs('fresher', this)" class="filter-btn py-3 px-4 rounded-lg font-semibold bg-[#9bca51]/20 hover:ring-2 hover:ring-[#9bca51]">Fresher</button>
+          <button onclick="filterJobs('experienced', this)" class="filter-btn py-3 px-4 rounded-lg font-semibold bg-[#e3d544]/50 hover:ring-2 hover:ring-[#e3d544]">Experienced</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Job Roles Section -->
-  <div id="jobs" class="max-w-7xl mx-auto mt-20 px-2 sm:px-4">
+  <!-- Job Cards Section -->
+  <div id="jobs" class="max-w-7xl mx-auto mt-20 px-2 sm:px-4 hidden">
     <div id="jobCards" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
     <p id="noResults" class="text-center text-gray-500 text-sm hidden mt-6">No roles found for this category.</p>
   </div>
 </section>
 
 
-<!-- Modal: Job Details -->
+
 <div id="jobModal" class="fixed inset-0 z-50 bg-black/60 hidden flex items-center justify-center">
   <div class="bg-white w-full max-w-xl rounded-xl p-6 relative">
     <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-600 hover:text-black">&times;</button>
@@ -226,7 +248,6 @@ Be part of a team that values your ideas. Grow with us through innovation, colla
   </div>
 </div>
 
-<!-- Modal: Application Form -->
 <div id="formModal" class="fixed inset-0 z-50 bg-black/60 hidden flex items-center justify-center">
   <div class="bg-white w-full max-w-xl rounded-xl p-6 relative">
     <button onclick="closeForm()" class="absolute top-2 right-2 text-gray-600 hover:text-black">&times;</button>
@@ -248,10 +269,9 @@ Be part of a team that values your ideas. Grow with us through innovation, colla
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <section class="w-full mt-10 max-md:mt-20">
-  <!-- Social Media Section -->
   <div class="bg-[#151a37] h-96 text-center text-white flex flex-col items-center justify-center">
   <h3 class="text-3xl font-semibold mb-6 uppercase">Follow us on</h3>
-  <div class="flex justify-center gap-12 text-3xl md:text-6xl mt-10">
+  <div class="flex justify-center gap-12 text-3xl md:text-5xl mt-10">
     <a href="#" aria-label="Facebook" class="hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
     <a href="#" aria-label="Instagram" class="hover:text-gray-400"><i class="fab fa-instagram"></i></a>
     <a href="#" aria-label="YouTube" class="hover:text-gray-400"><i class="fab fa-youtube"></i></a>
@@ -260,17 +280,13 @@ Be part of a team that values your ideas. Grow with us through innovation, colla
 </div>
 
 
-  <!-- Inclusion Statement Section -->
   <div class="relative">
-  <!-- Background Image -->
   <img src="./static/images/careers.jpeg" 
        alt="Inclusive Team" 
        class="w-full h-[500px] object-cover">
 
-  <!-- Black Overlay -->
   <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-  <!-- Text Content -->
   <div class="absolute inset-0 flex flex-col justify-center px-6 md:px-16 text-white z-10">
     <h2 class="text-2xl md:text-4xl font-bold leading-tight max-w-xl">
       Inclusion with Purpose,<br />
@@ -291,6 +307,66 @@ Be part of a team that values your ideas. Grow with us through innovation, colla
 
 
 
+<!-- FAB Container -->
+<div class="fixed bottom-6 right-6 z-50">
+  <!-- Radiating Buttons (TOP Only, Compact Spacing) -->
+  <div id="fabOptions" class="relative w-16 h-16">
+
+    <!-- WhatsApp Button -->
+<a href="https://wa.me/1234567890" target="_blank"
+   class="absolute left-1/2 transform -translate-x-1/2 -translate-y-20 scale-0 opacity-0 transition-all duration-300 bg-green-500 text-white rounded-full shadow-lg w-12 h-12 flex items-center justify-center"
+   id="whatsappBtn">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+       alt="WhatsApp"
+       class="w-5 h-5" />
+</a>
+
+
+    <!-- Call Button -->
+    <a href="tel:+1234567890"
+       class="absolute left-1/2 transform -translate-x-1/2 -translate-y-36 scale-0 opacity-0 transition-all duration-300 bg-emerald-500 text-white p-3 rounded-full shadow-lg"
+       id="callBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+           stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 5a2 2 0 012-2h2.28a1 1 0 01.948.684l1.286 3.857a1 1 0 01-.21.994l-1.516 1.516a11.042 11.042 0 005.292 5.292l1.516-1.516a1 1 0 01.994-.21l3.857 1.286A1 1 0 0119 18.72V21a2 2 0 01-2 2h-1C9.373 23 3 16.627 3 9V8a2 2 0 012-2z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Main FAB Button -->
+  <button onclick="toggleFab()" id="fabBtn"
+    class="bg-white hover:bg-gray-100 text-[#151a37] p-5 mt-[-2rem] rounded-full shadow-xl transition relative z-10 border border-gray-300">
+    <svg class="w-6 h-6 transition-transform duration-300" id="fabIcon"
+         fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16M12 4v16"></path>
+    </svg>
+  </button>
+</div>
+<script>
+  let fabOpen = false;
+
+  function toggleFab() {
+    fabOpen = !fabOpen;
+
+    const icon = document.getElementById("fabIcon");
+    const buttons = [
+      document.getElementById("whatsappBtn"),
+      document.getElementById("callBtn")
+    ];
+
+    icon.classList.toggle("rotate-45");
+
+    buttons.forEach(btn => {
+      if (fabOpen) {
+        btn.classList.remove("scale-0", "opacity-0", "pointer-events-none");
+      } else {
+        btn.classList.add("scale-0", "opacity-0");
+      }
+    });
+  }
+</script>
 
 
 
@@ -300,8 +376,6 @@ Be part of a team that values your ideas. Grow with us through innovation, colla
 
 
 
-
-<div class="w-full h-1 bg-[#151a37]"></div>
 
 <footer class="bg-white text-gray-300 pt-20 pb-2 px-6 md:px-20 min-h-[400px]">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">

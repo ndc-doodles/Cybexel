@@ -55,9 +55,9 @@
 
       <!-- Right Side: Contact & Menu Toggle -->
       <div class="flex items-center gap-4">
-        <!-- Contact Us Button (Desktop) -->
         <a href="contact.html" class="hidden md:inline-block">
-          <button class="bg-white text-[#151a37] text-sm px-5 py-2 rounded-full font-medium transition">
+          <button id="enquire-btn"
+            class="bg-white text-[#151a37] text-sm px-5 py-2 rounded-full font-medium transition">
             Contact Us
           </button>
         </a>
@@ -240,6 +240,66 @@
 
 
 
+<!-- FAB Container -->
+<div class="fixed bottom-6 right-6 z-50">
+  <!-- Radiating Buttons (TOP Only, Compact Spacing) -->
+  <div id="fabOptions" class="relative w-16 h-16">
+
+    <!-- WhatsApp Button -->
+<a href="https://wa.me/1234567890" target="_blank"
+   class="absolute left-1/2 transform -translate-x-1/2 -translate-y-20 scale-0 opacity-0 transition-all duration-300 bg-green-500 text-white rounded-full shadow-lg w-12 h-12 flex items-center justify-center"
+   id="whatsappBtn">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+       alt="WhatsApp"
+       class="w-5 h-5" />
+</a>
+
+
+    <!-- Call Button -->
+    <a href="tel:+1234567890"
+       class="absolute left-1/2 transform -translate-x-1/2 -translate-y-36 scale-0 opacity-0 transition-all duration-300 bg-emerald-500 text-white p-3 rounded-full shadow-lg"
+       id="callBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+           stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 5a2 2 0 012-2h2.28a1 1 0 01.948.684l1.286 3.857a1 1 0 01-.21.994l-1.516 1.516a11.042 11.042 0 005.292 5.292l1.516-1.516a1 1 0 01.994-.21l3.857 1.286A1 1 0 0119 18.72V21a2 2 0 01-2 2h-1C9.373 23 3 16.627 3 9V8a2 2 0 012-2z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Main FAB Button -->
+  <button onclick="toggleFab()" id="fabBtn"
+    class="bg-white hover:bg-gray-100 text-[#151a37] p-5 mt-[-2rem] rounded-full shadow-xl transition relative z-10 border border-gray-300">
+    <svg class="w-6 h-6 transition-transform duration-300" id="fabIcon"
+         fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16M12 4v16"></path>
+    </svg>
+  </button>
+</div>
+<script>
+  let fabOpen = false;
+
+  function toggleFab() {
+    fabOpen = !fabOpen;
+
+    const icon = document.getElementById("fabIcon");
+    const buttons = [
+      document.getElementById("whatsappBtn"),
+      document.getElementById("callBtn")
+    ];
+
+    icon.classList.toggle("rotate-45");
+
+    buttons.forEach(btn => {
+      if (fabOpen) {
+        btn.classList.remove("scale-0", "opacity-0", "pointer-events-none");
+      } else {
+        btn.classList.add("scale-0", "opacity-0");
+      }
+    });
+  }
+</script>
 
 
 
@@ -248,7 +308,6 @@
 
 
 
-<div class="w-full h-1 bg-[#151a37]"></div>
 
 <footer class="bg-white text-gray-300 pt-20 pb-2 px-6 md:px-20 min-h-[400px]">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
