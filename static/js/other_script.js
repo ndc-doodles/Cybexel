@@ -117,33 +117,30 @@ window.toggleFab = function() {
 
 
 
- document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll('.counter');
+  document.addEventListener("DOMContentLoaded", function() {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000;
+        const steps = 80;
+        const increment = target / steps;
+        let current = 0;
+        let count = 0;
 
-  counters.forEach(counter => {
-    const target = +counter.getAttribute('data-target');
-    const duration = 4000; // total duration in ms
-    const steps = 40; // total steps
-    const increment = target / steps;
-    let current = 0;
-    let count = 0;
+        const update = () => {
+          current += increment;
+          if (count < steps) {
+            counter.innerText = Math.ceil(current);
+            count++;
+            setTimeout(update, duration / steps);
+          } else {
+            counter.innerText = target + "+";
+          }
+        };
 
-    const update = () => {
-      current += increment;
-      if (count < steps) {
-        counter.innerText = Math.ceil(current);
-        count++;
-        setTimeout(update, duration / steps);
-      } else {
-        counter.innerText = target + "+";
-      }
-    };
-
-    update();
-  });
-});
-
-
+        update();
+      });
+    });
 
 
 
