@@ -26,39 +26,33 @@
  
  
  
- 
- 
- 
- 
- 
 <header class="relative z-[9999] w-full">
   <nav id="navbar"
        class="fixed top-0 left-0 w-full bg-transparent px-4 py-6 transition-all duration-300 z-[9999] backdrop-blur-sm">
+    
     <div class="max-w-7xl mx-auto flex justify-between items-center">
-      
-      <!-- Logo -->
+
       <a href="index.html" class="flex items-center">
-        <img src="./static/images/logo1.jpg" alt="Wise Logo" class="w-24 h-auto" />
+        <img src="./static/images/logo1.jpg" alt="Wise Logo" class="w-32 h-auto" />
       </a>
 
-      <!-- Desktop Nav Links -->
       <div class="hidden md:flex items-center gap-8 text-base font-semibold nav-links text-white">
         <a href="index.html" class="nav-link hover:text-purple-300 transition">Home</a>
         <a href="services.html" class="nav-link hover:text-purple-300 transition">Services</a>
         <a href="careers.html" class="nav-link hover:text-purple-300 transition">Careers</a>
         <a href="about.html" class="nav-link hover:text-purple-300 transition">About</a>
-        <a href="blog.html" class="nav-link hover:text-purple-300 transition">Blog</a>
+        <a href="blog.html" class="nav-link  hover:text-purple-300 transition">Blog</a>
       </div>
 
-      <!-- Mobile Button + Contact -->
       <div class="flex items-center gap-4">
         <a href="contact.html" class="hidden md:inline-block">
-          <button class="bg-white text-[#151a37] text-sm px-5 py-2 rounded-full font-medium transition">
+          <button id="enquire-btn"
+            class="bg-white text-[#151a37] text-sm px-5 py-2 rounded-full font-medium transition">
             Contact Us
           </button>
         </a>
 
-        <div class="md:hidden">
+       <div class="md:hidden">
   <button id="menu-toggle" class="focus:outline-none">
     <svg id="menu-icon" class="w-6 h-6 text-white transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2"
          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -70,17 +64,18 @@
     </div>
   </nav>
 
-  <!-- Mobile Drawer Menu -->
   <div id="mobile-menu"
        class="md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg px-6 py-10 space-y-6 transform translate-x-full transition-transform duration-300 ease-in-out z-[9999]">
-    <!-- <button onclick="closeMenu()" class="absolute top-4 right-4 text-black text-2xl">&times;</button> -->
+    
+ 
+
     <a href="index.html" class="block text-black font-medium hover:text-purple-300">Home</a>
     <a href="services.html" class="block text-black font-medium hover:text-purple-300">Services</a>
     <a href="careers.html" class="block text-black font-medium hover:text-purple-300">Careers</a>
     <a href="about.html" class="block text-black font-medium hover:text-purple-300">About</a>
     <a href="blog.html" class="block text-black font-medium hover:text-purple-300">Blog</a>
     <a href="contact.html">
-      <button class="w-full bg-[#151a37] text-white text-sm px-5 py-2 mt-4 rounded-full font-medium transition">
+      <button class="w-full bg-[#151a37] mt-4 text-white text-sm px-5 py-2 rounded-full font-medium transition">
         Contact Us
       </button>
     </a>
@@ -88,28 +83,22 @@
 </header>
 
 
-
-<!-- Contact Page Intro Section -->
 <section class="w-full bg-[#151a37] text-white h-[400px] px-6 sm:px-12 md:px-24">
   <div class="max-w-7xl mx-auto h-full flex flex-col justify-center">
     <h1 class="text-4xl sm:text-5xl font-bold mb-4">Contact Us</h1>
     <p class="text-base sm:text-lg text-gray-300 max-w-2xl">
-      Have questions, ideas, or just want to say hello? We’d love to hear from you. Let’s work together and make something amazing.
+      Have questions, ideas or just want to say hello? We’d love to hear from you. Let’s work together and make something amazing.
     </p>
   </div>
 </section>
 
-<!-- Contact Section -->
 <section class="relative w-full py-24 px-6 md:px-20 overflow-hidden">
-  <!-- Faded Background Heading -->
   <h2 class="text-6xl md:text-6xl font-bold text-gray-200 absolute top-10 left-6 md:left-24 z-0 select-none uppercase leading-none">
     Contact
   </h2>
 
-  <!-- Content Grid: Form + Image -->
   <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
     
-    <!-- Left Column: Form -->
     <div class="flex flex-col space-y-10 mt-10">
       <p class="text-gray-700 text-md">
         Let’s connect — We’re here to help you move forward.
@@ -128,31 +117,26 @@
       </form>
     </div>
 
-    <!-- Right Column: Image -->
     <div class="rounded-xl overflow-hidden shadow-lg mt-28 lg:mt-24">
       <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg" alt="Contact illustration" class="w-full h-auto object-cover rounded-xl hover:scale-105 transition-transform duration-500" />
     </div>
   </div>
 
-  <!-- Contact Info Row -->
   <div class="relative z-10 max-w-7xl mx-auto mt-20">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
 
-      <!-- Phone -->
       <div class="flex flex-col items-center md:items-start gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#151a37" d="m19.23 15.26l-2.54-.29a1.99 1.99 0 0 0-1.64.57l-1.84 1.84a15.05 15.05 0 0 1-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52a2 2 0 0 0-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07c.53 8.54 7.36 15.36 15.89 15.89c1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98" stroke-width="0.5" stroke="#151a37"/></svg>
         <p class="font-semibold text-gray-800">Phone</p>
         <p class="text-gray-600 text-sm">+91 98765 43210</p>
       </div>
 
-      <!-- Email -->
       <div class="flex flex-col items-center md:items-start gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#151a37" d="M20 4a2 2 0 0 1 1.995 1.85L22 6v12a2 2 0 0 1-1.85 1.995L20 20H4a2 2 0 0 1-1.995-1.85L2 18V6a2 2 0 0 1 1.85-1.995L4 4zm0 3.414l-6.94 6.94a1.5 1.5 0 0 1-2.12 0L4 7.414V18h16zM18.586 6H5.414L12 12.586z" stroke-width="0.5" stroke="#151a37"/></g></svg>
         <p class="font-semibold text-gray-800">Email</p>
         <p class="text-gray-600 text-sm">contact@yourdomain.com</p>
       </div>
 
-      <!-- Offices -->
       <div class="flex flex-col items-center md:items-start gap-2">
        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#151a37" fill-rule="evenodd" d="M8.25 9a3.75 3.75 0 1 1 7.5 0a3.75 3.75 0 0 1-7.5 0M12 6.75a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5" clip-rule="evenodd" stroke-width="0.5" stroke="#151a37"/><path fill="#151a37" fill-rule="evenodd" d="M5.456 8.127a6.403 6.403 0 0 1 6.382-5.877h.324a6.403 6.403 0 0 1 6.382 5.877a6.9 6.9 0 0 1-1.534 4.931l-3.595 4.397a1.828 1.828 0 0 1-2.83 0L6.99 13.058a6.9 6.9 0 0 1-1.534-4.93m6.382-4.377a4.903 4.903 0 0 0-4.887 4.5a5.4 5.4 0 0 0 1.2 3.859l3.595 4.396c.131.16.377.16.508 0l3.595-4.396a5.4 5.4 0 0 0 1.2-3.859a4.903 4.903 0 0 0-4.887-4.5z" clip-rule="evenodd" stroke-width="0.5" stroke="#151a37"/><path fill="#151a37" d="M7.67 16.335a.75.75 0 1 0-1.34-.67l-2 4A.75.75 0 0 0 5 20.75h14a.75.75 0 0 0 .67-1.085l-2-4a.75.75 0 1 0-1.34.67l1.457 2.915H6.214z" stroke-width="0.5" stroke="#151a37"/></svg>
         <p class="font-semibold text-gray-800">Offices</p>
@@ -171,18 +155,9 @@
 
 
 
-
-
-
-
-
-
-<!-- FAB Container -->
 <div class="fixed bottom-6 right-6 z-50">
-  <!-- Radiating Buttons (TOP Only, Compact Spacing) -->
   <div id="fabOptions" class="relative w-16 h-16">
 
-    <!-- WhatsApp Button -->
 <a href="https://wa.me/1234567890" target="_blank"
    class="absolute left-1/2 transform -translate-x-1/2 -translate-y-20 scale-0 opacity-0 transition-all duration-300 bg-green-500 text-white rounded-full shadow-lg w-12 h-12 flex items-center justify-center"
    id="whatsappBtn">
@@ -192,7 +167,6 @@
 </a>
 
 
-    <!-- Call Button -->
     <a href="tel:+1234567890"
        class="absolute left-1/2 transform -translate-x-1/2 -translate-y-36 scale-0 opacity-0 transition-all duration-300 bg-emerald-500 text-white p-3 rounded-full shadow-lg"
        id="callBtn">
@@ -204,7 +178,6 @@
     </a>
   </div>
 
-  <!-- Main FAB Button -->
   <button onclick="toggleFab()" id="fabBtn"
     class="bg-white hover:bg-gray-100 text-[#151a37] p-5 mt-[-2rem] rounded-full shadow-xl transition relative z-10 border border-gray-300">
     <svg class="w-6 h-6 transition-transform duration-300" id="fabIcon"
@@ -214,36 +187,6 @@
     </svg>
   </button>
 </div>
-<script>
-  let fabOpen = false;
-
-  function toggleFab() {
-    fabOpen = !fabOpen;
-
-    const icon = document.getElementById("fabIcon");
-    const buttons = [
-      document.getElementById("whatsappBtn"),
-      document.getElementById("callBtn")
-    ];
-
-    icon.classList.toggle("rotate-45");
-
-    buttons.forEach(btn => {
-      if (fabOpen) {
-        btn.classList.remove("scale-0", "opacity-0", "pointer-events-none");
-      } else {
-        btn.classList.add("scale-0", "opacity-0");
-      }
-    });
-  }
-</script>
-
-
-
-
-
-
-
 
 
 <footer class="bg-white text-gray-300 pt-20 pb-2 px-6 md:px-20 min-h-[400px]">
@@ -252,7 +195,7 @@
     <div>
       <h2 class="text-2xl font-bold text-gray-500 mb-4">CYBEXEL</h2>
       <p class="text-sm leading-6 text-gray-500">
-        Empowering enterprises with smart, scalable, and secure digital solutions across the globe.
+        Empowering enterprises with smart, scalable and secure digital solutions across the globe.
       </p>
     </div>
 

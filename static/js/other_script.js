@@ -24,46 +24,73 @@ window.addEventListener('click', (e) => {
   }
 });
 
-// Scroll behavior for navbar styles
-// Scroll behavior for navbar styles
+const logo = document.getElementById('logo');
+
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
-  navbar.classList.add('bg-white/30', 'backdrop-blur-md', 'shadow-md', 'text-black');
-  navbar.classList.remove('text-white');
+    navbar.classList.add('bg-white/30', 'backdrop-blur-md', 'shadow-md', 'text-black');
+    navbar.classList.remove('text-white');
 
-  if (enquireBtn) {
-    enquireBtn.classList.remove('bg-white', 'text-[#151a37]');
-    enquireBtn.classList.add('bg-[#151a37]', 'text-white');
+    if (enquireBtn) {
+      enquireBtn.classList.remove('bg-white', 'text-[#151a37]');
+      enquireBtn.classList.add('bg-[#151a37]', 'text-white');
+    }
+
+    navLinks.forEach(link => {
+      link.classList.remove('text-white');
+      link.classList.add('text-black');
+    });
+
+    menuIcon.classList.remove('text-white');
+    menuIcon.classList.add('text-black');
+
+    // Swap logo image
+    logo.src = "./static/images/logo2.png";
+  } else {
+    navbar.classList.remove('bg-white/30', 'backdrop-blur-md', 'shadow-md', 'text-black');
+    navbar.classList.add('text-white');
+
+    if (enquireBtn) {
+      enquireBtn.classList.add('bg-white', 'text-[#151a37]');
+      enquireBtn.classList.remove('bg-[#151a37]', 'text-white');
+    }
+
+    navLinks.forEach(link => {
+      link.classList.add('text-white');
+      link.classList.remove('text-black');
+    });
+
+    menuIcon.classList.add('text-white');
+    menuIcon.classList.remove('text-black');
+
+    // Revert logo image
+    logo.src = "./static/images/logo1.png";
   }
-
-  navLinks.forEach(link => {
-    link.classList.remove('text-white');
-    link.classList.add('text-black');
-  });
-
-  menuIcon.classList.remove('text-white');
-  menuIcon.classList.add('text-black');
-
-} else {
-  navbar.classList.remove('bg-white/30', 'backdrop-blur-md', 'shadow-md', 'text-black');
-  navbar.classList.add('text-white');
-
-  if (enquireBtn) {
-    enquireBtn.classList.add('bg-white', 'text-[#151a37]');
-    enquireBtn.classList.remove('bg-[#151a37]', 'text-white');
-  }
-
-  navLinks.forEach(link => {
-    link.classList.add('text-white');
-    link.classList.remove('text-black');
-  });
-
-  menuIcon.classList.add('text-white');
-  menuIcon.classList.remove('text-black');
-}
-
 });
 
+
+let fabOpen = false;
+
+window.toggleFab = function() {
+  fabOpen = !fabOpen;
+
+  const icon = document.getElementById("fabIcon");
+  const buttons = [
+    document.getElementById("whatsappBtn"),
+    document.getElementById("callBtn")
+  ];
+
+  icon.classList.toggle("rotate-45");
+
+  buttons.forEach(btn => {
+    if (fabOpen) {
+      btn.classList.remove("scale-0", "opacity-0", "pointer-events-none");
+    } else {
+      btn.classList.add("scale-0", "opacity-0");
+      btn.classList.add("pointer-events-none");
+    }
+  });
+};
 
 
  document.addEventListener("DOMContentLoaded", function () {
@@ -199,3 +226,52 @@ function openForm() {
 function closeForm() {
   document.getElementById('formModal').classList.add('hidden');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const blogs = [
+  {
+    title: "Trends in Modern Design",
+    date: "June 25, 2025",
+    image: "https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg",
+    content: `Discover the latest trends shaping modern design studios...`
+  },
+  {
+    title: "Power of Minimalist Design",
+    date: "June 22, 2025",
+    image: "https://img.freepik.com/free-photo/close-up-person-working-home-night_23-2149090964.jpg",
+    content: "Minimalist design is more than aesthetics..."
+  },
+  {
+    title: "Sustainable Design for Studios",
+    date: "June 18, 2025",
+    image: "https://img.freepik.com/free-photo/indian-woman-working-laptop-street-cafe_1157-48457.jpg",
+    content: "Sustainability in design isn’t just a trend..."
+  }
+];
+
+
+ function openBlogModal(index) {
+  document.getElementById('modalTitle').innerText = blogs[index].title;
+  document.getElementById('modalDate').innerText = blogs[index].date;
+  document.getElementById('modalImage').src = blogs[index].image;
+  document.getElementById('modalContent').innerHTML = blogs[index].content; // Use innerHTML for <br> etc.
+  document.getElementById('blogModal').classList.remove('hidden');
+}
+
+
+  function closeBlogModal() {
+    document.getElementById('blogModal').classList.add('hidden');
+  }

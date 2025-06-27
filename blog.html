@@ -26,12 +26,7 @@
   <div class="absolute inset-0 bg-cover bg-center opacity-20 -z-10" style="background-image: url('./static/images/bg2.jpg');"></div>
  
  
- 
- 
- 
- 
- 
- 
+
  
 <header class="relative z-[9999] w-full">
   <nav id="navbar"
@@ -39,12 +34,11 @@
     
     <div class="max-w-7xl mx-auto flex justify-between items-center">
 
-      <!-- Logo -->
       <a href="index.html" class="flex items-center">
-        <img src="./static/images/logo1.jpg" alt="Wise Logo" class="w-24 h-auto" />
-      </a>
+  <img id="logo" src="./static/images/logo1.png" alt="Wise Logo" class="w-32 h-auto transition duration-300" />
+</a>
 
-      <!-- Desktop Links -->
+
       <div class="hidden md:flex items-center gap-8 text-base font-semibold nav-links text-white">
         <a href="index.html" class="nav-link hover:text-purple-300 transition">Home</a>
         <a href="services.html" class="nav-link hover:text-purple-300 transition">Services</a>
@@ -53,7 +47,6 @@
         <a href="blog.html" class="nav-link text-purple-500 font-bold hover:text-purple-300 transition">Blog</a>
       </div>
 
-      <!-- Right Side: Contact & Menu Toggle -->
       <div class="flex items-center gap-4">
         <a href="contact.html" class="hidden md:inline-block">
           <button id="enquire-btn"
@@ -74,12 +67,10 @@
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
   <div id="mobile-menu"
        class="md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg px-6 py-10 space-y-6 transform translate-x-full transition-transform duration-300 ease-in-out z-[9999]">
     
-    <!-- Close Button -->
-    <!-- <button onclick="closeMenu()" class="absolute top-4 right-4 text-2xl text-black">&times;</button> -->
+ 
 
     <a href="index.html" class="block text-black font-medium hover:text-purple-300">Home</a>
     <a href="services.html" class="block text-black font-medium hover:text-purple-300">Services</a>
@@ -102,29 +93,26 @@
   <div class="max-w-7xl mx-auto h-full flex flex-col justify-center">
     <h1 class="text-4xl sm:text-5xl font-bold mb-4">Our Blog</h1>
     <p class="text-base sm:text-lg text-gray-300 max-w-2xl">
-      Discover insights, tips, and stories on technology, business, and creativity. Stay updated with the latest trends and expert advice from our team.
+      Discover insights, tips, and stories on technology, business and creativity. Stay updated with the latest trends and expert advice from our team.
     </p>
   </div>
 </section>
 
 <section class=" text-gray-200 px-4 py-16">
   <div class="max-w-7xl mx-auto">
-    <!-- Heading Section -->
     <div class="mb-12 text-center md:text-left">
   <h2 class="text-6xl md:text-7xl font-bold text-gray-200 uppercase">
     Inside<br>
     Our Tech Space
   </h2>
   <p class="text-gray-400 mt-4 max-w-xl text-sm md:text-base">
-    Stay updated with the latest innovations, development stories, and technology insights from our team.
+    Stay updated with the latest innovations, development stories and technology insights from our team.
   </p>
 </div>
 
 
-    <!-- Cards Grid -->
-   <!-- Blog Cards Grid -->
+
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 md:px-20">
-  <!-- Repeated Card -->
   <div class="bg-[#121525] rounded-xl overflow-hidden shadow-lg" onclick="openBlogModal(0)">
     <img src="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg" alt="Design Trend" class="w-full h-64 object-cover" />
     <div class="p-5">
@@ -165,63 +153,22 @@
   </div>
 </div>
 
-<!-- Modal -->
 <div id="blogModal" class="fixed inset-0 z-50 bg-black/70 flex items-center justify-center hidden">
   <div class="bg-white text-black max-w-4xl w-[95%] md:w-[80%] rounded-lg shadow-lg p-8 relative overflow-y-auto max-h-[90vh]">
     
     <button onclick="closeBlogModal()" class="absolute top-2 right-3 text-2xl font-bold text-gray-600 hover:text-black">&times;</button>
 
-    <!-- Image Section -->
     <img id="modalImage" src="" alt="Blog Image" class="w-full h-64 object-cover rounded mb-6" />
 
-    <!-- Blog Title -->
     <h3 id="modalTitle" class="text-2xl font-bold mb-2"></h3>
 
-    <!-- Blog Date -->
     <p id="modalDate" class="text-sm text-gray-500 mb-4"></p>
 
-    <!-- Blog Content -->
     <p id="modalContent" class="text-gray-700 leading-relaxed text-sm"></p>
   </div>
 </div>
 
 
-<script>
-  const blogs = [
-  {
-    title: "Trends in Modern Design",
-    date: "June 25, 2025",
-    image: "https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg",
-    content: `Discover the latest trends shaping modern design studios...` // Keep the long HTML content
-  },
-  {
-    title: "Power of Minimalist Design",
-    date: "June 22, 2025",
-    image: "https://img.freepik.com/free-photo/close-up-person-working-home-night_23-2149090964.jpg",
-    content: "Minimalist design is more than aesthetics..."
-  },
-  {
-    title: "Sustainable Design for Studios",
-    date: "June 18, 2025",
-    image: "https://img.freepik.com/free-photo/indian-woman-working-laptop-street-cafe_1157-48457.jpg",
-    content: "Sustainability in design isn’t just a trend..."
-  }
-];
-
-
- function openBlogModal(index) {
-  document.getElementById('modalTitle').innerText = blogs[index].title;
-  document.getElementById('modalDate').innerText = blogs[index].date;
-  document.getElementById('modalImage').src = blogs[index].image;
-  document.getElementById('modalContent').innerHTML = blogs[index].content; // Use innerHTML for <br> etc.
-  document.getElementById('blogModal').classList.remove('hidden');
-}
-
-
-  function closeBlogModal() {
-    document.getElementById('blogModal').classList.add('hidden');
-  }
-</script>
 
   </div>
 </section>
@@ -237,15 +184,9 @@
 
 
 
-
-
-
-<!-- FAB Container -->
 <div class="fixed bottom-6 right-6 z-50">
-  <!-- Radiating Buttons (TOP Only, Compact Spacing) -->
   <div id="fabOptions" class="relative w-16 h-16">
 
-    <!-- WhatsApp Button -->
 <a href="https://wa.me/1234567890" target="_blank"
    class="absolute left-1/2 transform -translate-x-1/2 -translate-y-20 scale-0 opacity-0 transition-all duration-300 bg-green-500 text-white rounded-full shadow-lg w-12 h-12 flex items-center justify-center"
    id="whatsappBtn">
@@ -255,7 +196,6 @@
 </a>
 
 
-    <!-- Call Button -->
     <a href="tel:+1234567890"
        class="absolute left-1/2 transform -translate-x-1/2 -translate-y-36 scale-0 opacity-0 transition-all duration-300 bg-emerald-500 text-white p-3 rounded-full shadow-lg"
        id="callBtn">
@@ -267,7 +207,6 @@
     </a>
   </div>
 
-  <!-- Main FAB Button -->
   <button onclick="toggleFab()" id="fabBtn"
     class="bg-white hover:bg-gray-100 text-[#151a37] p-5 mt-[-2rem] rounded-full shadow-xl transition relative z-10 border border-gray-300">
     <svg class="w-6 h-6 transition-transform duration-300" id="fabIcon"
@@ -277,34 +216,6 @@
     </svg>
   </button>
 </div>
-<script>
-  let fabOpen = false;
-
-  function toggleFab() {
-    fabOpen = !fabOpen;
-
-    const icon = document.getElementById("fabIcon");
-    const buttons = [
-      document.getElementById("whatsappBtn"),
-      document.getElementById("callBtn")
-    ];
-
-    icon.classList.toggle("rotate-45");
-
-    buttons.forEach(btn => {
-      if (fabOpen) {
-        btn.classList.remove("scale-0", "opacity-0", "pointer-events-none");
-      } else {
-        btn.classList.add("scale-0", "opacity-0");
-      }
-    });
-  }
-</script>
-
-
-
-
-
 
 
 
@@ -315,7 +226,7 @@
     <div>
       <h2 class="text-2xl font-bold text-gray-500 mb-4">CYBEXEL</h2>
       <p class="text-sm leading-6 text-gray-500">
-        Empowering enterprises with smart, scalable, and secure digital solutions across the globe.
+        Empowering enterprises with smart, scalable and secure digital solutions across the globe.
       </p>
     </div>
 

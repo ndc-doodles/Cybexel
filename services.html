@@ -32,15 +32,13 @@
   <nav id="navbar"
        class="fixed top-0 left-0 w-full bg-transparent px-4 py-6 transition-all duration-300 z-[9999] backdrop-blur-sm">
     
-    <!-- Container -->
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       
-      <!-- Logo -->
       <a href="index.html" class="flex items-center">
-        <img src="./static/images/logo1.jpg" alt="Wise Logo" class="w-24 h-auto" />
-      </a>
+  <img id="logo" src="./static/images/logo1.png" alt="Wise Logo" class="w-32 h-auto transition duration-300" />
+</a>
 
-      <!-- Desktop Navigation -->
+
       <div class="hidden md:flex items-center gap-8 text-base font-semibold nav-links text-white">
         <a href="index.html" class="nav-link hover:text-purple-300 transition">Home</a>
         <a href="services.html" class="nav-link text-purple-500 font-bold hover:text-purple-300 transition">Services</a>
@@ -49,7 +47,6 @@
         <a href="blog.html" class="nav-link hover:text-purple-300 transition">Blog</a>
       </div>
 
-      <!-- Contact + Mobile Toggle (Right Aligned) -->
       <div class="flex items-center gap-4">
         <a href="contact.html" class="hidden md:inline-block">
           <button id="enquire-btn"
@@ -70,7 +67,6 @@
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
   <div id="mobile-menu"
        class="md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg px-6 py-10 space-y-6 transform translate-x-full transition-transform duration-300 ease-in-out z-[9999] overflow-y-auto">
     <a href="index.html" class="block text-black font-medium hover:text-purple-300">Home</a>
@@ -108,52 +104,44 @@
 
 <section class=" py-20 px-4 md:px-12 space-y-20">
 
-  <!-- 1. Custom App Development -->
   <div class="fade-in-on-scroll max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 
               bg-gradient-to-r from-[#151a37]/20 via-white to-white rounded-full px-6 py-16 
               opacity-0 translate-y-8 transition duration-1000">
-    <!-- Image -->
     <div class="flex justify-start md:pl-6">
       <div class="w-72 h-72 rounded-full overflow-hidden">
         <img src="https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg" 
              alt="App Development" class="w-full h-full object-cover" />
       </div>
     </div>
-    <!-- Text -->
     <div>
       <h3 class="text-3xl font-semibold text-gray-800 mb-5">Custom App Development</h3>
       <p class="text-gray-600 mb-6 text-base leading-relaxed">
-        We build high-performance mobile and web applications tailored to your business needs. From user-friendly interfaces to powerful backend systems, our custom app solutions are designed to scale, engage, and deliver seamless digital experiences across devices.
+We build high-performance mobile and web applications tailored to your business needs. From intuitive user interfaces to robust backend systems, our custom app solutions are designed to scale, engage your audience and deliver reliable digital experiences across all devices.
+
       </p>
     </div>
   </div>
 
-  <!-- 2. Branding & Designing -->
   <div class="fade-in-on-scroll max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 
               bg-gradient-to-l from-[#30bfe9]/20  via-white to-white rounded-full px-6 py-16 
               opacity-0 translate-y-8 transition duration-1000">
-    <!-- Text -->
     <div>
       <h3 class="text-3xl font-semibold text-gray-800 mb-5">Branding & Designing</h3>
       <p class="text-gray-600 text-base leading-relaxed">
-        Crafting powerful brand identities, logos, and visuals that resonate with your audience. Our design team blends creativity with strategy to build memorable brand experiences.
-      </p>
+We craft impactful brand identities, logos and visuals that connect with your audience. From posters and brochures to digital graphics and complete brand experiences, our design team blends creativity and strategy to bring your vision to life.      </p>
     </div>
-    <!-- Image -->
     <div class="flex justify-end md:pr-6">
       <div class="w-72 h-72 rounded-full overflow-hidden">
-        <img src="https://img.freepik.com/free-photo/branding-strategy-marketing-business-graphic-design_53876-125554.jpg" 
+        <img src="./static/images/branding.jpeg" 
              alt="Branding" class="w-full h-full object-cover" />
       </div>
     </div>
   </div>
 
-  <!-- 3. Web Development -->
   <div class="fade-in-on-scroll max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 
             bg-gradient-to-r from-[#9bca51]/20 via-white to-white rounded-full px-6 py-16 
             opacity-0 translate-y-8 transition duration-1000">
   
-  <!-- Image -->
   <div class="flex justify-start md:pl-6">
     <div class="w-72 h-72 rounded-full overflow-hidden">
       <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" 
@@ -161,33 +149,29 @@
     </div>
   </div>
 
-  <!-- Text -->
   <div>
     <h3 class="text-3xl font-semibold text-gray-800 mb-5">Web Development</h3>
-    <p class="text-gray-600 text-base leading-relaxed">
-      Building fast, secure, and scalable websites using modern technologies. From 
-      <span class="font-semibold text-[#151a37]">Static</span>,
-      <span class="font-semibold text-[#151a37]">Dynamic</span>,
-      and 
-      <span class="font-semibold text-[#151a37]">E-commerce</span> 
-      websites to full-stack platforms, we ensure your site performs and converts.
-    </p>
+<p class="text-gray-600 text-base leading-relaxed">
+  We build fast, secure and scalable websites tailored to your goals. From 
+  <span class="font-semibold text-[#151a37]">static</span>,
+  <span class="font-semibold text-[#151a37]">dynamic</span>
+  and 
+  <span class="font-semibold text-[#151a37]">e-commerce</span> 
+  sites to complete full-stack platforms, we make sure your website looks great, performs flawlessly and drives results.
+</p>
+
   </div>
 </div>
 
 
-  <!-- 4. Digital Marketing -->
   <div class="fade-in-on-scroll max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 
               bg-gradient-to-l from-[#e3d544]/20 via-white to-white rounded-full px-6 py-16 
               opacity-0 translate-y-8 transition duration-1000">
-    <!-- Text -->
     <div>
       <h3 class="text-3xl font-semibold text-gray-800 mb-5">Digital Marketing</h3>
       <p class="text-gray-600 text-base leading-relaxed">
-        Boost visibility and engagement through strategic SEO, social media, content marketing, and paid campaigns tailored to your business goals.
-      </p>
+Boost your visibility and connect with your audience through strategic SEO, social media, content marketing and targeted campaigns tailored to your business goals. We help you build brand awareness, attract the right customers and drive measurable results online.      </p>
     </div>
-    <!-- Image -->
     <div class="flex justify-end md:pr-6">
       <div class="w-72 h-72 rounded-full overflow-hidden">
         <img src="https://img.freepik.com/free-photo/marketing-ideas-share-research-planning-concept_53876-127431.jpg" 
@@ -196,38 +180,30 @@
     </div>
   </div>
 
-  <!-- 5. UI/UX Design -->
   <div class="fade-in-on-scroll max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 
               bg-gradient-to-r from-[#eaa23a]/20 via-white to-white rounded-full px-6 py-16 
               opacity-0 translate-y-8 transition duration-1000">
-    <!-- Image -->
     <div class="flex justify-start md:pl-6">
       <div class="w-72 h-72 rounded-full overflow-hidden">
         <img src="https://img.freepik.com/free-vector/smart-home-management_52683-43471.jpg" 
              alt="UI/UX" class="w-full h-full object-cover" />
       </div>
     </div>
-    <!-- Text -->
     <div>
       <h3 class="text-3xl font-semibold text-gray-800 mb-5">UI/UX Design</h3>
       <p class="text-gray-600 text-base leading-relaxed">
-        We design intuitive interfaces and seamless user experiences that make navigating your digital products feel effortless and enjoyable.
-      </p>
+We create intuitive interfaces and engaging user experiences that make navigating your digital products effortless and enjoyable. From research and wireframes to polished designs, our team ensures every interaction feels smooth, consistent and aligned with your brand.</p>
     </div>
   </div>
 
-  <!-- 6. Custom Software Solutions -->
   <div class="fade-in-on-scroll max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 
               bg-gradient-to-l from-[#d53041]/20 via-white to-white rounded-full px-6 py-16 
               opacity-0 translate-y-8 transition duration-1000">
-    <!-- Text -->
     <div>
       <h3 class="text-3xl font-semibold text-gray-800 mb-5">Custom Software Solutions</h3>
       <p class="text-gray-600 text-base leading-relaxed">
-        Automate workflows and solve unique challenges with tailored desktop or cloud-based software built specifically for your business operations.
-      </p>
+Automate workflows, improve efficiency and solve unique challenges with tailored desktop or cloud-based software built specifically for your business. From planning to deployment, we deliver secure, scalable solutions that fit seamlessly into your operations.      </p>
     </div>
-    <!-- Image -->
     <div class="flex justify-end md:pr-6">
       <div class="w-72 h-72 rounded-full overflow-hidden">
         <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg" 
@@ -241,12 +217,9 @@
 
 
 
-<!-- FAB Container -->
 <div class="fixed bottom-6 right-6 z-50">
-  <!-- Radiating Buttons (TOP Only, Compact Spacing) -->
   <div id="fabOptions" class="relative w-16 h-16">
 
-    <!-- WhatsApp Button -->
 <a href="https://wa.me/1234567890" target="_blank"
    class="absolute left-1/2 transform -translate-x-1/2 -translate-y-20 scale-0 opacity-0 transition-all duration-300 bg-green-500 text-white rounded-full shadow-lg w-12 h-12 flex items-center justify-center"
    id="whatsappBtn">
@@ -256,7 +229,6 @@
 </a>
 
 
-    <!-- Call Button -->
     <a href="tel:+1234567890"
        class="absolute left-1/2 transform -translate-x-1/2 -translate-y-36 scale-0 opacity-0 transition-all duration-300 bg-emerald-500 text-white p-3 rounded-full shadow-lg"
        id="callBtn">
@@ -268,7 +240,6 @@
     </a>
   </div>
 
-  <!-- Main FAB Button -->
   <button onclick="toggleFab()" id="fabBtn"
     class="bg-white hover:bg-gray-100 text-[#151a37] p-5 mt-[-2rem] rounded-full shadow-xl transition relative z-10 border border-gray-300">
     <svg class="w-6 h-6 transition-transform duration-300" id="fabIcon"
@@ -278,29 +249,7 @@
     </svg>
   </button>
 </div>
-<script>
-  let fabOpen = false;
 
-  function toggleFab() {
-    fabOpen = !fabOpen;
-
-    const icon = document.getElementById("fabIcon");
-    const buttons = [
-      document.getElementById("whatsappBtn"),
-      document.getElementById("callBtn")
-    ];
-
-    icon.classList.toggle("rotate-45");
-
-    buttons.forEach(btn => {
-      if (fabOpen) {
-        btn.classList.remove("scale-0", "opacity-0", "pointer-events-none");
-      } else {
-        btn.classList.add("scale-0", "opacity-0");
-      }
-    });
-  }
-</script>
 
 
 
@@ -310,7 +259,7 @@
     <div>
       <h2 class="text-2xl font-bold text-gray-500 mb-4">CYBEXEL</h2>
       <p class="text-sm leading-6 text-gray-500">
-        Empowering enterprises with smart, scalable, and secure digital solutions across the globe.
+        Empowering enterprises with smart, scalable and secure digital solutions across the globe.
       </p>
     </div>
 
