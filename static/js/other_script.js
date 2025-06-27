@@ -117,11 +117,12 @@ window.toggleFab = function() {
 
 
 
+ document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll('.counter');
 
   counters.forEach(counter => {
     const target = +counter.getAttribute('data-target');
-    const duration = 800; // total duration in ms
+    const duration = 4000; // total duration in ms
     const steps = 40; // total steps
     const increment = target / steps;
     let current = 0;
@@ -140,7 +141,7 @@ window.toggleFab = function() {
 
     update();
   });
-
+});
 
 
 
