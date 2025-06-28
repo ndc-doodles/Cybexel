@@ -10,6 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Comfortaa:wght@300..700&family=Michroma&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 
 
  <style>
@@ -113,24 +117,36 @@
     <span></span>
   </div>
 
-  <div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 items-center mt-20 gap-10 md:gap-16 relative z-10 max-md:mt-0">
+<div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 items-center mt-20 gap-10 md:gap-16 relative z-10 max-md:mt-0">
 
-    <div class="text-center md:text-left">
-      <p class="px-2 font-bold text-gray-400 text-sm md:text-base">Future Ready</p>
-<h1 class="text-3xl sm:text-4xl lg:text-[4rem] font-bold text-[#2D0C57] leading-snug sm:leading-tight lg:leading-[5rem]">
-  Smart Tech, Smarter Business
-</h1>
-        
-<p class="text-gray-600 mt-4 pl-2 text-sm md:text-base">
-       Empower your digital journey with Cybexel. We craft powerful websites, scalable applications and comprehensive IT solutions to elevate your brand and fuel your success.
-    </div>
+  <div class="text-center md:text-left flex flex-col gap-4 order-2 md:order-1">
 
-    <div class="center-v-cut-left shadow-lg overflow-hidden w-full max-w-full">
+    <h1 class="text-3xl sm:text-4xl lg:text-[4rem] font-bold text-[#2D0C57] leading-snug sm:leading-tight lg:leading-[5rem] order-1">
+      Smart Tech, Smarter Business
+    </h1>
+
+    <p class="px-2 font-bold text-gray-400 text-sm md:text-base order-2">
+      Future Ready
+    </p>
+
+    <div class="block center-v-cut-left md:hidden order-3">
       <img src="./static/images/intro.jpeg" alt="Digital Expert"
-           class="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-lg shadow-md">
+           class="w-full h-[300px] sm:h-[400px] object-cover rounded-lg shadow-md">
     </div>
+
+    <p class="text-gray-600 mt-4 pl-2 text-sm md:text-base order-4">
+      Empower your digital journey with Cybexel. We craft powerful websites, scalable applications and comprehensive IT solutions to elevate your brand and fuel your success.
+    </p>
 
   </div>
+
+  <div class="hidden md:block order-1 md:order-2 center-v-cut-left shadow-lg overflow-hidden w-full max-w-full">
+    <img src="./static/images/intro.jpeg" alt="Digital Expert"
+         class="w-full h-[500px] object-cover rounded-lg shadow-md">
+  </div>
+
+</div>
+
 </section>
 
 
@@ -162,25 +178,31 @@
   <div class="w-[40%] sm:w-[60%] h-px bg-[#151a37]"></div>
 </div>
 
-    <div
-      id="videoModal"
-      class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50"
+  <!-- Modal Container -->
+<div
+  id="videoModal"
+  class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50"
+>
+  <div class="relative w-full max-w-3xl mx-auto px-4">
+    <!-- Close Button -->
+    <button
+      id="closeModal"
+      class="absolute top-4 right-4 bg-white text-black text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-gray-200 transition z-10"
+      aria-label="Close video"
     >
-      <div class="relative w-full max-w-3xl mx-auto px-4">
-        <button
-          id="closeModal"
-          class="absolute top-2 right-2 text-white text-3xl font-bold focus:outline-none"
-        >
-          &times;
-        </button>
-        <video
-          id="modalVideo"
-          src="./static/images/video.mp4"
-          controls
-          class="w-full h-auto rounded"
-        ></video>
-      </div>
-    </div>
+      &times;
+    </button>
+
+    <!-- Video -->
+    <video
+      id="modalVideo"
+      src="./static/images/video.mp4"
+      controls
+      class="w-full h-auto rounded mt-4"
+    ></video>
+  </div>
+</div>
+
   </div>
 
   <div class="relative mt-10 w-full">
@@ -231,30 +253,46 @@ Fuel sustainable growth and drive your business forward with confidence.     </p
 
   <div class="max-w-7xl mx-auto px-9 text-center">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="bg-[#151a37]/10 rounded-xl p-6 text-left shadow hover:shadow-md transition">
-        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">360° Digital</p>
-        <h3 class="text-xl font-semibold mb-2">Achieve More with 360° Digital Coverage</h3>
-        <p class="text-gray-600 mb-4">End-to-end solutions that simplify complex tasks, boost productivity and drive sustainable growth across your business.</p>
-      </div>
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-      <div class="bg-blue-50 rounded-xl p-6 text-left shadow hover:shadow-md transition">
-        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Custom-Fit</p>
-        <h3 class="text-xl font-semibold mb-2">Custom-Fit Solutions, Built Around You</h3>
-        <p class="text-gray-600 mb-4">Get exactly what you need with solutions tailored to your goals, workflows and challenges—no one-size-fits-all approach here.</p>
-      </div>
-      <div class="bg-[#fdebfd] rounded-xl p-6 text-left shadow hover:shadow-md transition">
-        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Expert Support</p>
-        <h3 class="text-xl font-semibold mb-2">Expert Support You Can Rely On</h3>
-        <p class="text-gray-600 mb-4">Get dedicated help from real professionals who understand your needs and are here to ensure your success every step of the way.</p>
-      </div>
-
-      <div class="bg-[#151a37]/10 rounded-xl p-6 text-left shadow hover:shadow-md transition">
-        <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Smooth UX</p>
-        <h3 class="text-xl font-semibold mb-2">Deliver a Smooth UX</h3>
-        <p class="text-gray-600 mb-4">Delight users with intuitive design, fast performance and effortless navigation that keeps them engaged and coming back.</p>
-      </div>
+  <div class="relative bg-[#151a37]/10 rounded-xl h-[250px] p-6 text-left shadow hover:shadow-md transition overflow-hidden">
+    <i class="fas fa-sync-alt text-[#151a37] text-[5rem] opacity-10 absolute top-4 right-4 z-0 pointer-events-none"></i>
+    <div class="relative z-10 mt-[2rem]">
+      <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">360° Digital</p>
+      <h3 class="text-xl font-semibold mb-2">Achieve More with 360° Digital Coverage</h3>
+      <p class="text-gray-600 mb-4">End-to-end solutions that simplify complex tasks, boost productivity and drive sustainable growth across your business.</p>
     </div>
+  </div>
+
+  <div class="relative bg-blue-50 rounded-xl h-[250px] p-6 text-left shadow hover:shadow-md transition overflow-hidden">
+    <i class="fas fa-sliders-h text-blue-900 text-[5rem] opacity-10 absolute top-4 right-4 z-0 pointer-events-none"></i>
+    <div class="relative z-10 mt-[2rem]">
+      <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Custom-Fit</p>
+      <h3 class="text-xl font-semibold mb-2">Custom-Fit Solutions, Built Around You</h3>
+      <p class="text-gray-600 mb-4">Get exactly what you need with solutions tailored to your goals, workflows and challenges—no one-size-fits-all approach here.</p>
+    </div>
+  </div>
+
+  <div class="relative bg-[#fdebfd] rounded-xl h-[250px] p-6 text-left shadow hover:shadow-md transition overflow-hidden">
+    <i class="fas fa-headset text-pink-700 text-[5rem] opacity-10 absolute top-4 right-4 z-0 pointer-events-none"></i>
+    <div class="relative z-10 mt-[2rem]">
+      <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Expert Support</p>
+      <h3 class="text-xl font-semibold mb-2">Expert Support You Can Rely On</h3>
+      <p class="text-gray-600 mb-4">Get dedicated help from real professionals who understand your needs and are here to ensure your success every step of the way.</p>
+    </div>
+  </div>
+
+  <div class="relative bg-[#151a37]/10 rounded-xl h-[250px] p-6 text-left shadow hover:shadow-md transition overflow-hidden">
+    <i class="fas fa-mouse-pointer text-[#151a37] text-[5rem] opacity-10 absolute top-4 right-4 z-0 pointer-events-none"></i>
+    <div class="relative z-10 mt-[2rem]">
+      <p class="text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-4 text-gray-600">Smooth UX</p>
+      <h3 class="text-xl font-semibold mb-2">Deliver a Smooth UX</h3>
+      <p class="text-gray-600 mb-4">Delight users with intuitive design, fast performance and effortless navigation that keeps them engaged and coming back.</p>
+    </div>
+  </div>
+
+</div>
+
   </div>
   </div>
 </section>
@@ -402,52 +440,67 @@ Softwares</h3>
 
 
 
-<div class="max-w-7xl rounded-xl mx-auto px-10 py-12 grid grid-cols-1 md:grid-cols-6 gap-6 mt-24 max-md:mt-0">
+<div class="max-w-7xl rounded-xl mx-auto px-10 py-20 min-h-[600px] grid grid-cols-1 md:grid-cols-6 gap-6 mt-24 max-md:mt-0">
   <div class="md:col-span-4 bg-[#151a37] text-white rounded-3xl p-5 flex flex-col justify-center">
     <span class="inline-block text-xs mb-2 py-1 px-2 bg-white/10 rounded-full w-fit">About Us</span>
-    <h2 class="text-2xl font-bold leading-snug uppercase">HarmenIT: Powering Your Digital Future.
+    <h2 class="text-2xl font-bold leading-snug uppercase">Cybexel: Powering Your Digital Future.
 </h2>
-    <p class="mt-3 text-sm text-white/90">
-We’re your dedicated IT partner, delivering tailored strategies, cutting-edge tools and unwavering support to help your business thrive.    </p>
+<p class="mt-3 text-sm text-white/90">
+  We’re your dedicated IT partner, delivering tailored strategies, cutting-edge tools and unwavering support to help your business thrive.
+</p>
+<a href="about.html" class="mt-2 inline-block text-sm text-white  hover:text-white/70 transition">
+  Know more →
+</a>
+
   </div>
+<div class="md:col-span-2 flex md:grid md:grid-cols-2 gap-3 overflow-x-auto whitespace-nowrap">
 
-  <div class="md:col-span-2 grid grid-cols-2 gap-6">
-    <div class="flex flex-col justify-between space-y-6">
-      <div class="bg-[#30bfe9]/20 rounded-3xl p-4 shadow-md hover:shadow-xl transition-shadow">
-        <div class="mb-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#151a37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 12 17.657 7.757M6.343 7.757L10.586 12 6.343 16.243" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold text-[#151a37]">30+</h3>
-        <p class="text-xs text-gray-600 mt-1">Countries with trusted clients</p>
+  <div class="flex md:flex-col gap-3 min-w-max">
+    
+    <div class="min-w-[100px] h-[100px] bg-[#30bfe9]/20 rounded-2xl p-2 hover:shadow-md transition-shadow">
+      <div class="mb-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#151a37]" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17.657 16.657L13.414 12 17.657 7.757M6.343 7.757L10.586 12 6.343 16.243" />
+        </svg>
       </div>
-
-      <div class="bg-[#eaa23a]/20 rounded-3xl p-4 shadow-md hover:shadow-xl transition-shadow">
-        <div class="mb-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#151a37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M15 11a4 4 0 10-8 0 4 4 0 008 0zM17 11a4 4 0 014 4v1a4 4 0 01-4 4h-2.5" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold text-[#151a37]">120+</h3>
-        <p class="text-xs text-gray-600 mt-1">Global Clients</p>
-      </div>
+      <h3 class="text-md font-semibold text-[#151a37]">30+</h3>
+      <p class="text-sm text-gray-600 mt-1">Countries</p>
     </div>
 
-    <div class="flex items-center">
-      <div class="bg-[#e3d544]/20 rounded-3xl p-4 shadow-md hover:shadow-xl transition-shadow w-full">
-        <div class="mb-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#151a37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 7a2 2 0 012-2h4l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold text-[#151a37]">1450+</h3>
-        <p class="text-xs text-gray-600 mt-1">Projects Delivered</p>
+    <div class="min-w-[100px] h-[100px] bg-[#eaa23a]/20 rounded-2xl p-2 hover:shadow-md transition-shadow">
+      <div class="mb-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#151a37]" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M15 11a4 4 0 10-8 0 4 4 0 008 0zM17 11a4 4 0 014 4v1a4 4 0 01-4 4h-2.5" />
+        </svg>
       </div>
+      <h3 class="text-md font-semibold text-[#151a37]">120+</h3>
+      <p class="text-sm text-gray-600 mt-1">Clients</p>
     </div>
   </div>
+
+  <div class="min-w-[100px] h-[100px] mt-16 max-md:mt-0">
+    <div class="h-full bg-[#e3d544]/20 rounded-2xl p-2 hover:shadow-md transition-shadow">
+      <div class="mb-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#151a37]" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 7a2 2 0 012-2h4l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+        </svg>
+      </div>
+      <h3 class="text-md font-semibold text-[#151a37]">1450+</h3>
+      <p class="text-sm text-gray-600 mt-1">Projects</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 
   <div class="md:col-span-6">
     <img src="./static/images/about2.jpeg" alt="Hiking Image" class="w-full h-[300px] object-cover rounded-3xl" />
@@ -518,7 +571,7 @@ Reach out today—our team is ready to support your goals every step of the way.
 
 
 <footer class="bg-white text-gray-300 pt-20 pb-2 px-6 md:px-20 min-h-[400px]">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-8">
 
     <div>
       <h2 class="text-2xl font-bold text-gray-500 mb-4">CYBEXEL</h2>
