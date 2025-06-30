@@ -1,18 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const playButton = document.getElementById('playButton');
-  const videoModal = document.getElementById('videoModal');
-  const modalVideo = document.getElementById('modalVideo');
-  const closeModal = document.getElementById('closeModal');
 
-  playButton.addEventListener('click', () => {
-    videoModal.classList.remove('hidden');
-    modalVideo.play();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollVideo = document.getElementById("scrollVideo");
+  const videoSection = document.getElementById("videoSection");
+  const customPlay = document.getElementById("customPlay");
+  let played = false;
+  let zoom = 1;
+  let finished = false;
+
+  // 🔘 Click to play
+  customPlay.addEventListener("click", () => {
+    scrollVideo.play();
+    customPlay.style.display = "none";
+    played = true;
   });
 
-  closeModal.addEventListener('click', () => {
-    modalVideo.pause();
-    modalVideo.currentTime = 0;
-    videoModal.classList.add('hidden');
+  // 🔍 Zoom on scroll
+  window.addEventListener("scroll", () => {
+    const rect = videoSection.getBoundingClientRect();
+    if (played && rect.top >= 0 && rect.bottom <= window.innerHeight + rect.height / 2) {
+      zoom += 0.01;
+      scrollVideo.style.transform = `scale(${Math.min(zoom, 1.3)})`;
+    }
+  });
+
+  // ✅ Scroll to next section after video ends
+  scrollVideo.addEventListener("ended", () => {
+    finished = true;
+  });
+
+  window.addEventListener("wheel", (e) => {
+    if (finished && e.deltaY > 0) {
+      const next = document.querySelector("section:nth-of-type(2)");
+      next.scrollIntoView({ behavior: "smooth" });
+    }
   });
 });
 
