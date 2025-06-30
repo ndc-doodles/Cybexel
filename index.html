@@ -15,7 +15,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
 
-
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
  <style>
   
 </style>
@@ -160,7 +160,7 @@
 <!-- MAIN SECTION -->
 <section class="min-h-screen flex flex-col justify-center relative overflow-hidden max-md:mt-[-2rem]">
   <div class="max-w-7xl px-4 sm:px-8 pt-16 md:ml-24 z-10">
-    <h1 class="text-4xl md:text-7xl font-bold text-gray-200 select-none uppercase leading-snug">
+    <h1 class="text-4xl md:text-7xl font-bold text-gray-300 select-none uppercase leading-snug">
       Digital Edge
     </h1>
     <p class="md:text-md text-gray-500 mt-4 max-w-7xl pl-1">
@@ -175,23 +175,28 @@
    
 <div id="videoSection" class="flex md:justify-end justify-center relative mt-10 md:mt-20 w-full">
   <div class="w-full md:w-[70%] h-[250px] sm:h-[350px] md:h-[500px] overflow-hidden relative group">
-    <!-- Video -->
-    <video
-      id="scrollVideo"
-      src="./static/images/video.mp4"
-      class="w-full h-full object-cover transition-transform duration-300 ease-in-out"
-      muted
-      playsinline
-    ></video>
+  
+  <!-- Video -->
+  <video
+    id="scrollVideo"
+    src="./static/images/video3.mp4"
+    class="w-full h-full object-cover transition-transform duration-300 ease-in-out"
+    muted
+    playsinline
+  ></video>
 
-    <!-- Centered Play Button -->
-    <button
-      id="customPlay"
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#151a37] hover:bg-[#0f1228] transition duration-300 group-hover:scale-110 flex items-center justify-center"
-    >
-      <span class="text-white text-2xl">&#9654;</span>
-    </button>
-  </div>
+  <!-- Transparent Black Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50 pointer-events-none"></div>
+
+  <!-- Centered Play Button -->
+  <button
+    id="customPlay"
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#151a37] hover:bg-[#0f1228] transition duration-300 group-hover:scale-110 flex items-center justify-center"
+  >
+    <span class="text-white text-2xl">&#9654;</span>
+  </button>
+</div>
+
 </div>
 
 
@@ -226,7 +231,7 @@
 <section class="py-20 px-4 md:px-20 relative overflow-hidden mt-20 max-md:mt-10">
   <div class="max-w-7xl mx-auto">
 
-    <h2 class="text-4xl md:text-7xl font-bold text-gray-200 absolute top-10  md:px-8 z-0 select-none uppercase">
+    <h2 class="text-4xl md:text-7xl font-bold text-gray-300 absolute top-10  md:px-8 z-0 select-none uppercase">
       Solutions
     </h2>
 
@@ -240,17 +245,18 @@ Fuel sustainable growth and drive your business forward with confidence.     </p
   <div class="max-w-7xl mx-auto px-9 text-center">
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-  <div class="relative bg-[#151a37]/10 rounded-xl p-4 sm:p-6 text-left shadow hover:shadow-md transition overflow-hidden">
-    <i class="fas fa-sync-alt text-[#151a37] text-[4rem] sm:text-[5rem] opacity-10 absolute top-2 right-2 sm:top-4 sm:right-4 z-0 pointer-events-none"></i>
-    <div class="relative z-10 mt-8">
-      <p class="text-xs sm:text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-3 text-gray-600">360° Digital</p>
-      <h3 class="text-lg sm:text-xl font-semibold mb-2 leading-snug">Achieve More with 360° Digital Coverage</h3>
-      <p class="text-gray-600 text-sm sm:text-base">End-to-end solutions that simplify complex tasks, boost productivity and drive sustainable growth across your business.</p>
-    </div>
+  <div class="relative bg-[#151a37]/10 rounded-xl p-4 sm:p-6 text-left shadow hover:shadow-md transition overflow-hidden group">
+  <i class="fas fa-sync-alt vibrate-icon text-[#151a37] text-[4rem] sm:text-[5rem] opacity-10 absolute top-2 right-2 sm:top-4 sm:right-4 z-0 pointer-events-none"></i>
+  <div class="relative z-10 mt-8">
+    <p class="text-xs sm:text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-3 text-gray-600">360° Digital</p>
+    <h3 class="text-lg sm:text-xl font-semibold mb-2 leading-snug">Achieve More with 360° Digital Coverage</h3>
+    <p class="text-gray-600 text-sm sm:text-base">End-to-end solutions that simplify complex tasks, boost productivity and drive sustainable growth across your business.</p>
   </div>
+</div>
 
-  <div class="relative bg-blue-50 rounded-xl p-4 sm:p-6 text-left shadow hover:shadow-md transition overflow-hidden">
-    <i class="fas fa-sliders-h text-blue-900 text-[4rem] sm:text-[5rem] opacity-10 absolute top-2 right-2 sm:top-4 sm:right-4 z-0 pointer-events-none"></i>
+
+  <div class="relative bg-blue-50 rounded-xl p-4 sm:p-6 text-left shadow hover:shadow-md transition overflow-hidden group">
+    <i class="fas fa-sliders-h vibrate-icon  text-blue-900 text-[4rem] sm:text-[5rem] opacity-10 absolute top-2 right-2 sm:top-4 sm:right-4 z-0 pointer-events-none"></i>
     <div class="relative z-10 mt-8">
       <p class="text-xs sm:text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-3 text-gray-600">Custom-Fit</p>
       <h3 class="text-lg sm:text-xl font-semibold mb-2 leading-snug">Custom-Fit Solutions, Built Around You</h3>
@@ -258,8 +264,8 @@ Fuel sustainable growth and drive your business forward with confidence.     </p
     </div>
   </div>
 
-  <div class="relative bg-[#fdebfd] rounded-xl p-4 sm:p-6 text-left shadow hover:shadow-md transition overflow-hidden">
-    <i class="fas fa-headset text-pink-700 text-[4rem] sm:text-[5rem] opacity-10 absolute top-2 right-2 sm:top-4 sm:right-4 z-0 pointer-events-none"></i>
+  <div class="relative bg-[#fdebfd] rounded-xl p-4 sm:p-6 text-left shadow hover:shadow-md transition overflow-hidden group">
+    <i class="fas fa-headset vibrate-icon  text-pink-700 text-[4rem] sm:text-[5rem] opacity-10 absolute top-2 right-2 sm:top-4 sm:right-4 z-0 pointer-events-none"></i>
     <div class="relative z-10 mt-8">
       <p class="text-xs sm:text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-3 text-gray-600">Expert Support</p>
       <h3 class="text-lg sm:text-xl font-semibold mb-2 leading-snug">Expert Support You Can Rely On</h3>
@@ -267,8 +273,8 @@ Fuel sustainable growth and drive your business forward with confidence.     </p
     </div>
   </div>
 
-  <div class="relative bg-[#151a37]/10 rounded-xl p-4 sm:p-6 text-left shadow hover:shadow-md transition overflow-hidden">
-    <i class="fas fa-mouse-pointer text-[#151a37] text-[4rem] sm:text-[5rem] opacity-10 absolute top-2 right-2 sm:top-4 sm:right-4 z-0 pointer-events-none"></i>
+  <div class="relative bg-[#151a37]/10 rounded-xl p-4 sm:p-6 text-left shadow hover:shadow-md transition overflow-hidden group">
+    <i class="fas fa-mouse-pointer vibrate-icon  text-[#151a37] text-[4rem] sm:text-[5rem] opacity-10 absolute top-2 right-2 sm:top-4 sm:right-4 z-0 pointer-events-none"></i>
     <div class="relative z-10 mt-8">
       <p class="text-xs sm:text-sm font-medium bg-white inline-block px-3 py-1 rounded-full mb-3 text-gray-600">Smooth UX</p>
       <h3 class="text-lg sm:text-xl font-semibold mb-2 leading-snug">Deliver a Smooth UX</h3>
@@ -303,7 +309,7 @@ Fuel sustainable growth and drive your business forward with confidence.     </p
 
 <section class="relative text-gray-800 mt-10 px-4 md:px-10 max-md:pt-0 max-md:mt-6">
   <div class="max-w-7xl mx-auto mb-20 px-10 max-md:px-4">
-    <h2 class="text-4xl md:text-7xl font-bold text-gray-200 uppercase select-none ">
+    <h2 class="text-4xl md:text-7xl font-bold text-gray-300 uppercase select-none ">
       Services
     </h2>
     <p class="text-gray-600 text-md md:w-2/3 mt-4">
@@ -316,7 +322,7 @@ Transform your business with tailored IT services, expert consulting and innovat
 <div class="card group relative col-span-12 sm:col-span-6 lg:col-span-4 h-[400px] rounded-xl overflow-hidden shadow-lg">
 <div class="absolute inset-0 bg-cover bg-center transition-all duration-700 
   group-hover:scale-110 group-hover:blur-sm 
-  clicked:scale-110 clicked:blur-sm"         style="background-image: url('https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg?ga=GA1.1.1888351375.1703911423&semt=ais_hybrid&w=740');"></div>
+  clicked:scale-110 clicked:blur-sm"         style="background-image: url('./static/images/app.jpg');"></div>
     <div class="absolute inset-0 bg-black bg-opacity-50 transition-all duration-700"></div>
     <div class="relative z-10 h-full flex flex-col justify-end items-center text-center p-6 transition-all duration-700 ease-in-out group-hover:justify-center">
       <h3 class="text-white text-xl font-bold mb-2 
@@ -443,7 +449,7 @@ Softwares</h3>
 
 <section class=" bg-white mt-20 pt-20 max-md:pt-4">
   <div class="max-w-7xl mx-auto px-4 text-center">
-    <h2 class="text-4xl md:text-7xl font-bold text-gray-200 uppercase select-none">
+    <h2 class="text-4xl md:text-7xl font-bold text-gray-300 uppercase select-none">
   Our Trusted Clients
 </h2>
 
@@ -451,29 +457,61 @@ Softwares</h3>
       We proudly collaborate with industry-leading brands to deliver exceptional digital solutions.
     </p>
 
-    <!-- Marquee container -->
-    <div class="mt-20 overflow-hidden relative">
-      <div class="flex whitespace-nowrap animate-marquee">
-        <!-- Original logos -->
-        <img src="./static/images/client1.png" alt="Client 1" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client2.png" alt="Client 2" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client3.png" alt="Client 3" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client4.png" alt="Client 4" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client5.png" alt="Client 5" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <!-- Duplicate logos #1 -->
-        <img src="./static/images/client1.png" alt="Client 1 Duplicate" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client2.png" alt="Client 2 Duplicate" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client3.png" alt="Client 3 Duplicate" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client4.png" alt="Client 4 Duplicate" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client5.png" alt="Client 5 Duplicate" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <!-- Duplicate logos #2 -->
-        <img src="./static/images/client1.png" alt="Client 1 Duplicate 2" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client2.png" alt="Client 2 Duplicate 2" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client3.png" alt="Client 3 Duplicate 2" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client4.png" alt="Client 4 Duplicate 2" class="h-12 w-auto mx-8 inline-block object-contain" />
-        <img src="./static/images/client5.png" alt="Client 5 Duplicate 2" class="h-12 w-auto mx-8 inline-block object-contain" />
-      </div>
+  <div class="marquee-container mt-14">
+  <div class="marquee-track">
+    <div class="marquee-content">
+      <!-- Original logos -->
+      
+      <img src="./static/images/client3.png" alt="Client 3" class="logo" />
+      <img src="./static/images/client4.png" alt="Client 4" class="logo" />
+      <img src="./static/images/client5.png" alt="Client 5" class="logo" />
+      <img src="./static/images/client6.jpg" alt="Client 6" class="logo" />
+      <img src="./static/images/client7.png" alt="Client 7" class="logo" />
+      <img src="./static/images/client8.png" alt="Client 8" class="logo" />
+      <img src="./static/images/client9.png" alt="Client 9" class="logo" />
+      <img src="./static/images/client10.png" alt="Client 10" class="logo" />
+      <img src="./static/images/client11.png" alt="Client 11" class="logo" />
+      <img src="./static/images/client12.png" alt="Client 12" class="logo" />
+      <img src="./static/images/client13.png" alt="Client 13" class="logo" />
+      <img src="./static/images/client14.png" alt="Client 14" class="logo" />
+      <img src="./static/images/client15.png" alt="Client 15" class="logo" />
+      <img src="./static/images/client16.png" alt="Client 16" class="logo" />
+      <img src="./static/images/client17.png" alt="Client 17" class="logo" />
+      <img src="./static/images/client18.png" alt="Client 18" class="logo" />
+      <img src="./static/images/client19.png" alt="Client 19" class="logo" />
+      <img src="./static/images/client20.png" alt="Client 20" class="logo" />
+      <img src="./static/images/client21.png" alt="Client 21" class="logo" />
+      <img src="./static/images/client22.png" alt="Client 22" class="logo" />
     </div>
+    <!-- Duplicate the same logos for seamless looping -->
+    <div class="marquee-content">
+      <!-- <img src="./static/images/client1.jpg" alt="Client 1 duplicate" class="logo" />
+      <img src="./static/images/client2.jpg" alt="Client 2 duplicate" class="logo" /> -->
+      <img src="./static/images/client3.png" alt="Client 3 duplicate" class="logo" />
+      <img src="./static/images/client4.png" alt="Client 4 duplicate" class="logo" />
+      <img src="./static/images/client5.png" alt="Client 5 duplicate" class="logo" />
+      <img src="./static/images/client6.jpg" alt="Client 6 duplicate" class="logo" />
+      <img src="./static/images/client7.png" alt="Client 7 duplicate" class="logo" />
+      <img src="./static/images/client8.png" alt="Client 8 duplicate" class="logo" />
+      <img src="./static/images/client9.png" alt="Client 9 duplicate" class="logo" />
+      <img src="./static/images/client10.png" alt="Client 10 duplicate" class="logo" />
+      <img src="./static/images/client11.png" alt="Client 11 duplicate" class="logo" />
+      <img src="./static/images/client12.png" alt="Client 12 duplicate" class="logo" />
+      <img src="./static/images/client13.png" alt="Client 13 duplicate" class="logo" />
+      <img src="./static/images/client14.png" alt="Client 14 duplicate" class="logo" />
+      <img src="./static/images/client15.png" alt="Client 15 duplicate" class="logo" />
+      <img src="./static/images/client16.png" alt="Client 16 duplicate" class="logo" />
+      <img src="./static/images/client17.png" alt="Client 17 duplicate" class="logo" />
+      <img src="./static/images/client18.png" alt="Client 18 duplicate" class="logo" />
+      <img src="./static/images/client19.png" alt="Client 19 duplicate" class="logo" />
+      <img src="./static/images/client20.png" alt="Client 20 duplicate" class="logo" />
+      <img src="./static/images/client21.png" alt="Client 21 duplicate" class="logo" />
+      <img src="./static/images/client22.png" alt="Client 22 duplicate" class="logo" />
+    </div>
+  </div>
+</div>
+
+
   </div>
 </section>
 
@@ -504,40 +542,36 @@ Softwares</h3>
   <!-- Box 1 -->
   <div class="h-[90px] bg-[#30bfe9]/20 rounded-2xl p-2 hover:shadow-md transition-shadow text-center">
     <div class="mb-1 flex justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#151a37]" fill="none"
-           viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M17.657 16.657L13.414 12 17.657 7.757M6.343 7.757L10.586 12 6.343 16.243" />
-      </svg>
+     <i class="fi fi-rs-globe text-[#151a37]"></i>
     </div>
     <h3 class="text-sm font-semibold text-[#151a37]">30+</h3>
-    <p class="text-[10px] text-gray-600">Countries</p>
+    <p class="text-[12px] text-gray-600">Countries</p>
   </div>
 
   <!-- Box 2 -->
-  <div class="h-[90px] bg-[#eaa23a]/20 rounded-2xl p-2 hover:shadow-md transition-shadow text-center">
+<div class="h-[90px] bg-[#eaa23a]/20 rounded-2xl p-2 hover:shadow-md transition-shadow text-center self-end mt-20 max-md:mt-0">
     <div class="mb-1 flex justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#151a37]" fill="none"
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#151a37]" fill="none"
            viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M15 11a4 4 0 10-8 0 4 4 0 008 0zM17 11a4 4 0 014 4v1a4 4 0 01-4 4h-2.5" />
       </svg>
     </div>
     <h3 class="text-sm font-semibold text-[#151a37]">120+</h3>
-    <p class="text-[10px] text-gray-600">Clients</p>
+    <p class="text-[12px] text-gray-600">Clients</p>
   </div>
 
   <!-- Box 3 -->
-  <div class="h-[90px] bg-[#e3d544]/20 rounded-2xl p-2 hover:shadow-md transition-shadow text-center">
+  <div class="h-[90px] bg-[#e3d544]/20 rounded-2xl p-2 hover:shadow-md transition-shadow text-center ">
     <div class="mb-1 flex justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#151a37]" fill="none"
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#151a37]" fill="none"
            viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M3 7a2 2 0 012-2h4l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
       </svg>
     </div>
     <h3 class="text-sm font-semibold text-[#151a37]">1450+</h3>
-    <p class="text-[10px] text-gray-600">Projects</p>
+    <p class="text-[12px] text-gray-600">Projects</p>
   </div>
 
 </div>
@@ -558,7 +592,7 @@ Softwares</h3>
 
 
 <section class="relative w-full sm:py-6 px-4 sm:px-6 md:px-16 lg:px-32 mt-6">
-  <h2 class="text-[2.5rem] md:text-7xl font-bold text-gray-200 select-none leading-none px-2 max-md:mb-4 md:text-left">
+  <h2 class="text-[2.5rem] md:text-7xl font-bold text-gray-300 select-none leading-none px-2 max-md:mb-4 md:text-left">
     CAREERS
   </h2>
 
@@ -570,14 +604,14 @@ Softwares</h3>
 </p>
 
       <p class="text-md text-gray-600 leading-relaxed text-left md:text-left ">
-        At our company, we believe in innovation, collaboration, and impact. From engineers to designers, every team member plays a vital role in shaping solutions that serve millions. We offer flexible work environments, continuous learning, and a chance to grow with us.
+        At our company, we believe in innovation, collaboration and impact. From engineers to designers, every team member plays a vital role in shaping solutions that serve millions. We offer flexible work environments, continuous learning and a chance to grow with us.
       </p>
 
      
       <div class="flex flex-wrap justify-center md:justify-start gap-4">
-        <a href="careers.html#opportunities" class="px-6 py-2 bg-[#151a37] text-white text-sm rounded-full hover:bg-[#1f254f] transition-all duration-300">
+        <!-- <a href="careers.html#opportunities" class="px-6 py-2 bg-[#151a37] text-white text-sm rounded-full hover:bg-[#1f254f] transition-all duration-300">
           Explore Opportunities
-        </a>
+        </a> -->
         <a href="careers.html" class="px-6 py-2 border border-[#151a37] text-[#151a37] text-sm rounded-full hover:bg-[#151a37] hover:text-white transition-all">
           Explore Cybexel Life
         </a>
