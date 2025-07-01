@@ -5,8 +5,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hero Section</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<title>Cybexel</title>
+
+  <link rel="icon" href="./static/images/logo1.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./static/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Comfortaa:wght@300..700&family=Michroma&display=swap" rel="stylesheet">
@@ -27,7 +29,7 @@
  
 <header class="relative z-[9999] w-full">
   <nav id="navbar"
-       class="fixed top-0 left-0 w-full bg-transparent px-4 py-6 transition-all duration-300 z-[9999] backdrop-blur-sm">
+       class="fixed top-0 left-0 w-full bg-transparent px-4 py-[1.3rem] transition-all duration-300 z-[9999] backdrop-blur-sm">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
 
       <a href="index.html" class="flex items-center">
@@ -143,44 +145,62 @@ Be part of a team that values your ideas. Grow with us through innovation, colla
 
     <div class="w-full md:w-[70%]">
   <div class="rounded-xl p-4 shadow">
-    <div class="grid sm:grid-cols-3 gap-4 items-center mb-6">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center mb-6">
 
-  <!-- All Jobs Button with Label -->
-  <div class="w-full">
-    <label class="block text-sm text-[#151a37] mb-1 ml-1">Show</label>
-    <button id="allJobsBtn" onclick="resetFilters()"
-      class="tab-button w-full h-[42px] bg-[#151a37] text-white border border-white rounded-lg font-semibold shadow-sm hover:bg-white hover:text-[#151a37] transition">
-      All Jobs
-    </button>
+    <!-- All Jobs Button with Label -->
+    <div class="w-full">
+      <label class="block text-sm text-[#151a37] mb-1 ml-1">Show</label>
+      <button id="allJobsBtn" onclick="resetFilters()"
+        class="tab-button w-full h-[42px] bg-[#151a37] text-white border border-white rounded-lg font-semibold shadow-sm hover:bg-white hover:text-[#151a37] transition">
+        All Jobs
+      </button>
+    </div>
+
+    <!-- Department Dropdown -->
+    <div class="w-full relative">
+      <label class="block text-sm text-[#151a37] mb-1 ml-1">Department</label>
+      <div class="relative">
+        <select onchange="filterDepartment(this.value)"
+          class="tab-dropdown appearance-none w-full h-[42px] border border-white px-4 pr-10 rounded-lg bg-[#151a37] text-white shadow-sm focus:ring-2 focus:ring-white focus:outline-none">
+          <option value="all">All</option>
+          <option value="Development">Development</option>
+          <option value="Design">Design</option>
+          <option value="Testing">Testing</option>
+        </select>
+        <!-- Custom Dropdown Icon -->
+        <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience Dropdown -->
+    <div class="w-full relative">
+      <label class="block text-sm text-[#151a37] mb-1 ml-1">Experience</label>
+      <div class="relative">
+        <select onchange="filterJobs(this.value)"
+          class="tab-dropdown appearance-none w-full h-[42px] border border-white px-4 pr-10 rounded-lg bg-[#151a37] text-white shadow-sm focus:ring-2 focus:ring-white focus:outline-none">
+          <option value="all">All</option>
+          <option value="internship">Internship</option>
+          <option value="fresher">Fresher</option>
+          <option value="experienced">Experienced</option>
+        </select>
+        <!-- Custom Dropdown Icon -->
+        <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
   </div>
-
-  <!-- Department Filter -->
-  <div class="w-full">
-    <label class="block text-sm text-[#151a37] mb-1 ml-1">Department</label>
-    <select onchange="filterDepartment(this.value)"
-      class="tab-dropdown w-full h-[42px] border border-white px-4 rounded-lg bg-[#151a37] text-white shadow-sm focus:ring-2 focus:ring-white focus:outline-none">
-      <option value="all">All</option>
-      <option value="Development">Development</option>
-      <option value="Design">Design</option>
-      <option value="Testing">Testing</option>
-    </select>
-  </div>
-
-  <!-- Experience Filter -->
-  <div class="w-full">
-    <label class="block text-sm text-[#151a37] mb-1 ml-1">Experience</label>
-    <select onchange="filterJobs(this.value)"
-      class="tab-dropdown w-full h-[42px] border border-white px-4 rounded-lg bg-[#151a37] text-white shadow-sm focus:ring-2 focus:ring-white focus:outline-none">
-      <option value="all">All</option>
-      <option value="internship">Internship</option>
-      <option value="fresher">Fresher</option>
-      <option value="experienced">Experienced</option>
-    </select>
-  </div>
-
 </div>
 
-  </div>
 </div>
 
   </div>

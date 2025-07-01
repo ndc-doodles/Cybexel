@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hero Section</title>
+<title>Cybexel</title>
+
+  <link rel="icon" href="./static/images/logo1.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./static/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -30,7 +32,7 @@
   <header class="relative z-[9999] h-screen flex flex-col justify-between">
 
 <div id="navbar-container" class="w-full flex justify-center fixed top-0 z-[9999] transition-all duration-300">
-  <nav class="w-full max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+  <nav class="w-full max-w-7xl mx-auto px-4 py-[1.3rem] flex justify-between items-center">
     
     <a href="index.html" class="flex items-center">
       <img src="./static/images/logo2.png" alt="Wise Logo" class="w-36 h-auto" />
@@ -157,15 +159,14 @@
 
 
 
-<!-- MAIN SECTION -->
+
 <section class="min-h-screen flex flex-col justify-center relative overflow-hidden max-md:mt-[-2rem]">
   <div class="max-w-7xl px-4 sm:px-8 pt-16 md:ml-24 z-10">
     <h1 class="text-4xl md:text-7xl font-bold text-gray-300 select-none uppercase leading-snug">
-      Digital Edge
+      Find Nearby, Fast.
     </h1>
     <p class="md:text-md text-gray-500 mt-4 max-w-7xl pl-1">
-      We blend creativity with technology to craft digital experiences that captivate and inspire.
-      With a sharp eye for detail and a future-ready approach, we help unlock your brand’s full potential through innovative solutions.
+Easily discover a wide range of trusted local services and businesses near you, tailored to your exact location. Whether it's a quick errand or an urgent need, everything is just around the corner and only a tap away.
     </p>
   </div>
 
@@ -174,43 +175,46 @@
 
    
 <div id="videoSection" class="flex md:justify-end justify-center relative mt-10 md:mt-20 w-full">
-  <div class="w-full md:w-[70%] h-[250px] sm:h-[350px] md:h-[500px] overflow-hidden relative group">
+  <div class="w-full md:w-[70%] h-[250px] sm:h-[350px] md:h-[700px] overflow-hidden relative group">
   
   <!-- Video -->
-  <video
-    id="scrollVideo"
-    src="./static/images/video3.mp4"
-    class="w-full h-full object-cover transition-transform duration-300 ease-in-out"
-    muted
-    playsinline
-  ></video>
+<video
+  id="scrollVideo"
+  src="./static/images/video4.mp4"
+  class="w-full h-full object-fill transition-transform duration-300 ease-in-out"
+  muted
+  playsinline
+  autoplay
+></video>
 
-  <!-- Transparent Black Overlay -->
-  <div class="absolute inset-0 bg-black bg-opacity-50 pointer-events-none"></div>
+<!-- Transparent Black Overlay -->
+<div class="absolute inset-0 bg-black bg-opacity-65 pointer-events-none"></div>
 
-  <!-- Centered Play Button -->
-  <button
-    id="customPlay"
-    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#151a37] hover:bg-[#0f1228] transition duration-300 group-hover:scale-110 flex items-center justify-center"
-  >
-    <span class="text-white text-2xl">&#9654;</span>
-  </button>
+<!-- Centered Play Button (optional, can remove if not needed) -->
+<button
+  id="customPlay"
+  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#151a37] hover:bg-[#0f1228] transition duration-300 group-hover:scale-110 flex items-center justify-center hidden"
+>
+  <span class="text-white text-2xl">&#9654;</span>
+</button>
+
 </div>
 
 </div>
 
 
 
-    <!-- Text Box -->
-    <div class="relative md:absolute md:bottom-10 md:left-44 bg-[#151a37] text-white p-4 md:p-10 mx-4 mt-6 md:mt-0 max-w-full md:max-w-md text-sm md:text-base">
-      <p class="mb-2">
-        Providing professional support in the field of technology consulting,
-        software development and digital transformation solutions.
-      </p>
-      <p>
-        We empower businesses of all sizes with scalable, secure
-        and innovative IT solutions.
-      </p>
+
+    <div class="relative md:absolute md:bottom-10 md:left-44 bg-[#151a37] text-white p-4 md:p-10 mx-4 mt-6 md:mt-0 max-w-full md:max-w-lg text-sm md:text-base">
+      <h1 class="text-5xl font-medium">n-me app</h1>
+      <p class="mb-2 mt-6">
+Need a nearby grocery store, mechanic or salon? Our app makes it quick and easy to find trusted local services with just a few taps—saving you time and effort every day.
+</p>
+<p>
+No matter where you are, our smart listing system connects you instantly to the essentials around you. From errands to urgent needs, discover local fast and stress-free.
+</p>
+
+
     </div>
   </div>
 </section>
@@ -464,7 +468,7 @@ Softwares</h3>
       
       <img src="./static/images/client3.png" alt="Client 3" class="logo" />
       <img src="./static/images/client4.png" alt="Client 4" class="logo" />
-      <img src="./static/images/client5.png" alt="Client 5" class="logo" />
+      <img src="./static/images/client5.png" alt="Client 5" class="logo  w-36" />
       <img src="./static/images/client6.jpg" alt="Client 6" class="logo" />
       <img src="./static/images/client7.png" alt="Client 7" class="logo" />
       <img src="./static/images/client8.png" alt="Client 8" class="logo" />

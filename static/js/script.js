@@ -1,30 +1,19 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const scrollVideo = document.getElementById("scrollVideo");
   const videoSection = document.getElementById("videoSection");
-  const customPlay = document.getElementById("customPlay");
-  let played = false;
   let zoom = 1;
   let finished = false;
 
-  // 🔘 Click to play
-  customPlay.addEventListener("click", () => {
-    scrollVideo.play();
-    customPlay.style.display = "none";
-    played = true;
-  });
-
-  // 🔍 Zoom on scroll
+  // Zoom effect on scroll
   window.addEventListener("scroll", () => {
     const rect = videoSection.getBoundingClientRect();
-    if (played && rect.top >= 0 && rect.bottom <= window.innerHeight + rect.height / 2) {
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight + rect.height / 2) {
       zoom += 0.01;
       scrollVideo.style.transform = `scale(${Math.min(zoom, 1.3)})`;
     }
   });
 
-  // ✅ Scroll to next section after video ends
+  // Scroll to next section after video ends
   scrollVideo.addEventListener("ended", () => {
     finished = true;
   });
