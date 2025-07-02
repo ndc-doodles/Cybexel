@@ -151,15 +151,64 @@ window.toggleFab = function() {
 
 
 const jobs = [
-  // 👉 Fresher Roles
-  { label: 'fresher', title: 'Graphic Designer', exp: '0–1 years', department: 'Design', tags: ['Photoshop', 'Illustrator', 'Figma'] },
-  { label: 'fresher', title: 'Full Stack Developer (MERN)', exp: '0–1 years', department: 'Development', tags: ['MongoDB', 'Express.js', 'React', 'Node.js'] },
-  { label: 'fresher', title: 'Python Developer', exp: '0–1 years', department: 'Development', tags: ['Python', 'Django', 'MySQL'] },
-
-  // 👉 Internship Roles
-  { label: 'internship', title: 'Full Stack Developer Intern (MERN)', exp: 'N/A', department: 'Development', tags: ['MongoDB', 'Express.js', 'React', 'Node.js'] },
-  { label: 'internship', title: 'Python Developer Intern', exp: 'N/A', department: 'Development', tags: ['Python', 'Flask', 'PostgreSQL'] }
+  {
+    label: 'fresher',
+    title: 'Graphic Designer',
+    exp: '0–1 years',
+    department: 'Design',
+    tags: ['Canva', 'Photoshop', 'Illustrator', 'CorelDRAW']
+  },
+  {
+    label: 'fresher',
+    title: 'Full Stack Developer',
+    exp: '0–1 years',
+    department: 'Development',
+    tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'MongoDB', 'Python-Django', 'MySQL']
+  },
+  {
+    label: 'fresher',
+    title: 'Marketing Executive',
+    exp: '0–1 years',
+    department: 'Marketing',
+    tags: ['Email Marketing', 'Communication', 'Presentation Skills', 'Lead Generation', 'Market Research']
+  },
+  {
+    label: 'fresher',
+    title: 'SEO Analyst',
+    exp: '0–1 years',
+    department: 'SEO',
+    tags: ['On-page SEO', 'Off-page SEO', 'Keyword Research', 'Google Search Console', 'Backlinking','Internalinking']
+  },
+  {
+    label: 'fresher',
+    title: 'Digital Marketer',
+    exp: '0–1 years',
+    department: 'Digital Marketing',
+    tags: ['Google Ads', 'Meta Ads', 'Social Media  Marketing','Social Media  Managing']
+  },
+  {
+    label: 'fresher',
+    title: 'Telecallers',
+    exp: '0–1 years',
+    department: 'Telecalling',
+    tags: ['Inbound Calls', 'Outbound Calls', 'CRM Tools', 'Fluent Communication', 'Lead Conversion']
+  },
+  {
+    label: 'fresher',
+    title: 'Accountant',
+    exp: '0–1 years',
+    department: 'Accounts',
+    tags: ['Tally', 'GST Filing', 'MS Excel', 'Bookkeeping', 'Invoice Management']
+  },
+  {
+    label: 'fresher',
+    title: 'HR Executive',
+    exp: '0–1 years',
+    department: 'HR',
+    tags: ['Recruitment', 'Onboarding', 'HRMS Tools', 'Interview Scheduling', 'Employee Engagement']
+  }
 ];
+
 
 
 let currentJobs = [];
