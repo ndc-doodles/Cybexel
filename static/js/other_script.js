@@ -198,7 +198,7 @@ const jobs = [
     title: 'Accountant',
     exp: '0–1 years',
     department: 'Accounts',
-    tags: ['Tally', 'GST Filing', 'MS Office', 'Bookkeeping']
+    tags: ['ERP Software', 'GST Filing', 'MS Office', 'Bookkeeping','Communication Skills']
   },
   {
     label: 'fresher',
