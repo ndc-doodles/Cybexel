@@ -170,14 +170,14 @@ const jobs = [
     title: 'Marketing Executive',
     exp: '0–1 years',
     department: 'Marketing',
-    tags: ['Email Marketing', 'Communication', 'Presentation Skills', 'Lead Generation', 'Market Research']
+    tags: ['Adaptability', 'Communication Skills', 'Listening Skills', 'Market Analysis']
   },
   {
     label: 'fresher',
     title: 'SEO Analyst',
     exp: '0–1 years',
     department: 'SEO',
-    tags: ['On-page SEO', 'Off-page SEO', 'Keyword Research', 'Google Search Console', 'Backlinking','Internalinking']
+    tags: ['On-page SEO', 'Off-page SEO', 'Keyword Research', 'Google Search Console', 'Backlinking','Internal Linking']
   },
   {
     label: 'fresher',
@@ -191,21 +191,21 @@ const jobs = [
     title: 'Telecallers',
     exp: '0–1 years',
     department: 'Telecalling',
-    tags: ['Inbound Calls', 'Outbound Calls', 'CRM Tools', 'Fluent Communication', 'Lead Conversion']
+    tags: ['Communication Skills', 'Adapatabliliy', 'Listening Skills', 'Decision Making']
   },
   {
     label: 'fresher',
     title: 'Accountant',
     exp: '0–1 years',
     department: 'Accounts',
-    tags: ['Tally', 'GST Filing', 'MS Excel', 'Bookkeeping', 'Invoice Management']
+    tags: ['Tally', 'GST Filing', 'MS Office', 'Bookkeeping']
   },
   {
     label: 'fresher',
     title: 'HR Executive',
     exp: '0–1 years',
     department: 'HR',
-    tags: ['Recruitment', 'Onboarding', 'HRMS Tools', 'Interview Scheduling', 'Employee Engagement']
+tags: ['Labour Law', 'Communication Skills', 'Aptitude', 'Decision Making', 'Talent Acquisition']
   }
 ];
 
