@@ -1,17 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const scrollVideo = document.getElementById("scrollVideo");
   const videoSection = document.getElementById("videoSection");
-  let zoom = 1;
   let finished = false;
 
-  // Zoom effect on scroll
-  window.addEventListener("scroll", () => {
-    const rect = videoSection.getBoundingClientRect();
-    if (rect.top >= 0 && rect.bottom <= window.innerHeight + rect.height / 2) {
-      zoom += 0.01;
-      scrollVideo.style.transform = `scale(${Math.min(zoom, 1.3)})`;
-    }
-  });
+  // Removed zoom effect
 
   // Scroll to next section after video ends
   scrollVideo.addEventListener("ended", () => {
@@ -25,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
 
 
 

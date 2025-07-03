@@ -268,9 +268,13 @@ background: rgba(255, 255, 255, 0.1); /* Increase from 0.1 to 0.3 or 0.5 */
 
 
 
-  #scrollVideo {
-  transform: scale(1);
+#scrollVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Or use 'contain' if you want full visibility */
+  transform: scale(1) !important;
 }
+
 
 
 .marquee-container {
