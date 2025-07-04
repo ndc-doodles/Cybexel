@@ -355,3 +355,18 @@ h3{
   justify-content: center;
   font-size: 1.5rem;
 }
+
+
+
+
+@keyframes floatBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+.float-bounce {
+  animation: floatBounce 3s ease-in-out infinite;
+}
