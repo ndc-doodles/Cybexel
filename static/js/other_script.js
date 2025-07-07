@@ -473,16 +473,16 @@ const cards = document.querySelectorAll('.card');
   const overlayImages = document.getElementById('overlayImages');
   const closeOverlay = document.getElementById('closeOverlay');
 
-  cards.forEach(card => {
+ cards.forEach(card => {
   card.addEventListener('click', () => {
     const data = {
       heading: card.getAttribute('data-heading'),
       description: card.getAttribute('data-description'),
-      images: JSON.parse(card.getAttribute('data-images'))
+images: JSON.parse(card.getAttribute('data-images'))
     };
-    // Save data to localStorage
+    // Save to localStorage
     localStorage.setItem('selectedCard', JSON.stringify(data));
-    // Redirect to the detail page
+    // Redirect to detail page
     window.location.href = 'detail.html';
   });
 });
