@@ -24,6 +24,29 @@ window.addEventListener('click', (e) => {
   }
 });
 
+
+const aboutToggle = document.getElementById('about-toggle');
+const aboutDropdown = document.getElementById('about-dropdown');
+
+aboutToggle.addEventListener('click', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  // Toggle visible/hidden manually
+  aboutDropdown.classList.toggle('opacity-100');
+  aboutDropdown.classList.toggle('visible');
+  aboutDropdown.classList.toggle('opacity-0');
+  aboutDropdown.classList.toggle('invisible');
+});
+
+// Optional: close dropdown when clicking anywhere else
+document.addEventListener('click', (event) => {
+  if (!aboutDropdown.contains(event.target) && !aboutToggle.contains(event.target)) {
+    aboutDropdown.classList.remove('opacity-100', 'visible');
+    aboutDropdown.classList.add('opacity-0', 'invisible');
+  }
+});
+
+
 const logo = document.getElementById('logo');
 
 window.addEventListener('scroll', () => {
@@ -374,3 +397,110 @@ content: ` Creating an effective social media marketing strategy starts with cle
   function closeBlogModal() {
     document.getElementById('blogModal').classList.add('hidden');
   }
+
+
+
+
+
+
+
+
+  // cybexel life detail page
+
+  
+  window.addEventListener('DOMContentLoaded', function() {
+  // Get the stored data
+  const data = JSON.parse(localStorage.getItem('selectedCard'));
+  let currentIndex = 0; // To track which image is active
+  let allImages = [];
+
+  if (data) {
+    document.getElementById('detailHeading').textContent = data.heading;
+    document.getElementById('detailDescription').textContent = data.description;
+    document.getElementById('detailImages').innerHTML = data.images.map((src, index) => `
+      <img src="${src}" alt="" data-index="${index}" class="w-full rounded-lg object-cover cursor-pointer transition transform hover:scale-105">
+    `).join('');
+
+    // Save all image URLs
+    allImages = data.images;
+  } else {
+    document.getElementById('detailHeading').textContent = "No data found.";
+  }
+
+  // Get modal elements
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const closeModal = document.getElementById('closeModal');
+  const prevButton = document.getElementById('prevImage');
+  const nextButton = document.getElementById('nextImage');
+
+  // Open modal on image click
+  document.querySelectorAll('#detailImages img').forEach(img => {
+    img.addEventListener('click', () => {
+      currentIndex = parseInt(img.getAttribute('data-index'));
+      modalImage.src = allImages[currentIndex];
+      modal.classList.remove('hidden');
+    });
+  });
+
+  // Close modal
+  closeModal.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  // Click outside image closes modal
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
+
+  // Show previous image
+  prevButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+    modalImage.src = allImages[currentIndex];
+  });
+
+  // Show next image
+  nextButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % allImages.length;
+    modalImage.src = allImages[currentIndex];
+  });
+});
+
+
+// life page
+
+const cards = document.querySelectorAll('.card');
+  const overlay = document.getElementById('overlay');
+  const overlayHeading = document.getElementById('overlayHeading');
+  const overlayDescription = document.getElementById('overlayDescription');
+  const overlayImages = document.getElementById('overlayImages');
+  const closeOverlay = document.getElementById('closeOverlay');
+
+  cards.forEach(card => {
+  card.addEventListener('click', () => {
+    const data = {
+      heading: card.getAttribute('data-heading'),
+      description: card.getAttribute('data-description'),
+      images: JSON.parse(card.getAttribute('data-images'))
+    };
+    // Save data to localStorage
+    localStorage.setItem('selectedCard', JSON.stringify(data));
+    // Redirect to the detail page
+    window.location.href = 'detail.html';
+  });
+});
+
+
+  closeOverlay.addEventListener('click', () => {
+    overlay.classList.add('hidden');
+  });
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.add('hidden');
+    }
+  });

@@ -65,6 +65,26 @@ document.addEventListener('click', (event) => {
 
 
 
+const aboutToggle = document.getElementById('about-toggle');
+const aboutDropdown = document.getElementById('about-dropdown');
+
+aboutToggle.addEventListener('click', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  // Toggle visible/hidden manually
+  aboutDropdown.classList.toggle('opacity-100');
+  aboutDropdown.classList.toggle('visible');
+  aboutDropdown.classList.toggle('opacity-0');
+  aboutDropdown.classList.toggle('invisible');
+});
+
+// Optional: close dropdown when clicking anywhere else
+document.addEventListener('click', (event) => {
+  if (!aboutDropdown.contains(event.target) && !aboutToggle.contains(event.target)) {
+    aboutDropdown.classList.remove('opacity-100', 'visible');
+    aboutDropdown.classList.add('opacity-0', 'invisible');
+  }
+});
 
 
 

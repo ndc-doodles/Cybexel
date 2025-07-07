@@ -41,7 +41,15 @@
         <a href="index.html" class="nav-link hover:text-purple-300 transition">Home</a>
         <a href="services.html" class="nav-link hover:text-purple-300 transition">Services</a>
         <a href="careers.html" class="nav-link text-purple-500 font-bold hover:text-purple-300 transition">Careers</a>
-        <a href="about.html" class="nav-link hover:text-purple-300 transition">About</a>
+<div class="relative group">
+  <button id="about-toggle" class="hover:text-purple-300 transition flex items-center gap-1 focus:outline-none">
+    About
+  </button>
+  <div id="about-dropdown" class="absolute left-0 mt-2 w-48 bg-white text-black rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-50">
+    <a href="about.html" class="block px-4 py-2 hover:bg-purple-50">About Company</a>
+    <a href="cybexelife.html" class="block px-4 py-2 hover:bg-purple-50">Cybexel Life</a>
+  </div>
+</div>
         <a href="blog.html" class="nav-link hover:text-purple-300 transition">Blog</a>
       </div>
 
@@ -71,7 +79,8 @@
     <a href="index.html" class="block text-black font-medium hover:text-purple-300">Home</a>
     <a href="services.html" class="block text-black font-medium hover:text-purple-300">Services</a>
     <a href="careers.html" class="block text-purple-500 font-bold hover:text-purple-300">Careers</a>
-    <a href="about.html" class="block text-black font-medium hover:text-purple-300">About</a>
+<a href="about.html" class="block text-black font-medium hover:text-purple-300">About Company</a>
+<a href="cybexelife.html" class="block text-black font-medium hover:text-purple-300">Cybexel Life</a>
     <a href="blog.html" class="block text-black font-medium hover:text-purple-300">Blog</a>
     <a href="contact.html">
       <button class="w-full bg-[#151a37] text-white text-sm px-5 py-2 mt-4 rounded-full font-medium transition">
@@ -224,7 +233,7 @@ Be part of a team that values your ideas. Grow with us through innovation, colla
     <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-600 hover:text-black">&times;</button>
     <h3 id="modalTitle" class="text-xl font-bold text-gray-800 mb-1"></h3>
     <p id="modalLabel" class="text-sm text-blue-600 mb-2"></p>
-    <p class="text-sm text-gray-700 mb-4">Responsibilities & Description here (static or dynamic if available)</p>
+    <!-- <p class="text-sm text-gray-700 mb-4">Responsibilities & Description here (static or dynamic if available)</p> -->
     <div class="flex flex-wrap gap-2 mb-4" id="modalTags"></div>
     <div class="flex justify-between">
       <button onclick="closeModal()" class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded">Back</button>
