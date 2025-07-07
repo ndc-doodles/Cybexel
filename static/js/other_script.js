@@ -31,20 +31,19 @@ const aboutDropdown = document.getElementById('about-dropdown');
 aboutToggle.addEventListener('click', (e) => {
   e.preventDefault();
   e.stopPropagation();
-  // Toggle visible/hidden manually
-  aboutDropdown.classList.toggle('opacity-100');
-  aboutDropdown.classList.toggle('visible');
-  aboutDropdown.classList.toggle('opacity-0');
-  aboutDropdown.classList.toggle('invisible');
+  aboutDropdown.classList.toggle('active');
 });
 
-// Optional: close dropdown when clicking anywhere else
+// Close when clicking elsewhere
 document.addEventListener('click', (event) => {
-  if (!aboutDropdown.contains(event.target) && !aboutToggle.contains(event.target)) {
-    aboutDropdown.classList.remove('opacity-100', 'visible');
-    aboutDropdown.classList.add('opacity-0', 'invisible');
+  if (
+    !aboutDropdown.contains(event.target) &&
+    !aboutToggle.contains(event.target)
+  ) {
+    aboutDropdown.classList.remove('active');
   }
 });
+
 
 
 const logo = document.getElementById('logo');
