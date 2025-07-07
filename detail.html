@@ -45,7 +45,7 @@
         <a href="index.html" class="nav-link hover:text-purple-300 transition">Home</a>
         <a href="services.html" class="nav-link hover:text-purple-300 transition">Services</a>
         <a href="careers.html" class="nav-link hover:text-purple-300 transition">Careers</a>
-<div class="relative group">
+<div class="relative group nav-link  ">
   <button id="about-toggle" class="hover:text-purple-300 transition flex items-center gap-1 focus:outline-none">
     About
   </button>
@@ -54,7 +54,7 @@
     <a href="cybexelife.html" class="block px-4 py-2 hover:bg-purple-50">Cybexel Life</a>
   </div>
 </div>
-        <a href="blog.html" class="nav-link text-purple-500 font-bold hover:text-purple-300 transition">Blog</a>
+       <a href="blog.html" class="nav-link text-purple-500 font-bold hover:text-purple-300 transition">Blog</a>
       </div>
 
       <div class="flex items-center gap-4">
@@ -107,20 +107,19 @@
 Explore our culture, milestones and the people who make it all possible. Discover what makes our journey unique.    </p>
   </div>
 </section>
-  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-    <h1 id="detailHeading" class="text-6xl font-bold text-gray-200 uppercase mb-4"></h1>
-    <p id="detailDescription" class="text-gray-500 mb-6"></p>
-    <div id="detailImages" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
-  </div>
-<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[9999] hidden">
-  <button id="closeModal" class="absolute top-4 right-6 text-white text-4xl hover:text-gray-300 font-light">&times;</button>
-  
-  <button id="prevImage" class="absolute left-4 md:left-10 text-white text-4xl hover:text-gray-300 font-light">&#10094;</button>
-  
-  <img id="modalImage" src="" alt="" class="max-h-[80vh] max-w-[90vw] rounded shadow-lg transition duration-300 ease-in-out">
-  
-  <button id="nextImage" class="absolute right-4 md:right-10 text-white text-4xl hover:text-gray-300 font-light">&#10095;</button>
+ <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+  <h1 id="detailHeading" class="text-4xl md:text-6xl  font-bold text-gray-200 uppercase mb-4"></h1>
+  <p id="detailDescription" class="text-gray-500 mb-6"></p>
+  <div id="detailImages" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
 </div>
+
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[9999] hidden ">
+  <button id="closeModal" class="absolute top-4 right-6 text-white text-4xl hover:text-gray-300 font-light max-md:text-black max-md:hidden">&times;</button>
+  <button id="prevImage" class="absolute left-4 md:left-10 text-white text-4xl hover:text-gray-300 font-light max-md:text-black">&#10094;</button>
+  <img id="modalImage" src="" alt="" class="max-h-[80vh] max-w-[90vw] rounded shadow-lg transition duration-300 ease-in-out">
+  <button id="nextImage" class="absolute right-4 md:right-10 text-white text-4xl hover:text-gray-300 font-light max-md:text-black" >&#10095;</button>
+</div>
+
 
 
 <footer class="bg-white text-gray-300 pt-20 pb-2 px-6 md:px-20 min-h-[400px]">
@@ -206,7 +205,6 @@ Bengaluru
 
   </div>
 </footer>
-
 
 
 

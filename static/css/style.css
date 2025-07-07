@@ -370,3 +370,53 @@ h3{
 .float-bounce {
   animation: floatBounce 3s ease-in-out infinite;
 }
+
+
+
+/* Default styles */
+#modalImage {
+  width: auto;
+  height: auto;
+  max-height: 80vh;
+  max-width: 90vw;
+  object-fit: contain;
+}
+
+#prevImage,
+#nextImage,
+#closeModal {
+  padding: 0.5rem;
+  font-size: 2.5rem;
+}
+
+/* Make sure close button sits over the image */
+#closeModal {
+  top: 1rem;
+  right: 1rem;
+  z-index: 10; /* Make sure it's above image */
+}
+
+/* Mobile adjustments */
+@media (max-width: 639px) {
+  #modalImage {
+    width: 100vw;
+    height: auto;
+    max-height: none;
+    max-width: 100vw;
+    object-fit: contain;
+    border-radius: 0;
+  }
+
+  #prevImage,
+  #nextImage {
+    font-size: 1.8rem;
+    padding: 0.3rem;
+  }
+
+  #closeModal {
+    font-size: 1.8rem;   /* Smaller close icon */
+    padding: 0.3rem;
+    top: 0.5rem;          /* Closer to the top edge */
+    right: 0.5rem;
+  }
+}

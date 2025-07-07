@@ -408,10 +408,9 @@ content: ` Creating an effective social media marketing strategy starts with cle
   // cybexel life detail page
 
   
-  window.addEventListener('DOMContentLoaded', function() {
-  // Get the stored data
+ window.addEventListener('DOMContentLoaded', function() {
   const data = JSON.parse(localStorage.getItem('selectedCard'));
-  let currentIndex = 0; // To track which image is active
+  let currentIndex = 0;
   let allImages = [];
 
   if (data) {
@@ -420,49 +419,44 @@ content: ` Creating an effective social media marketing strategy starts with cle
     document.getElementById('detailImages').innerHTML = data.images.map((src, index) => `
       <img src="${src}" alt="" data-index="${index}" class="w-full rounded-lg object-cover cursor-pointer transition transform hover:scale-105">
     `).join('');
-
-    // Save all image URLs
     allImages = data.images;
   } else {
     document.getElementById('detailHeading').textContent = "No data found.";
   }
 
-  // Get modal elements
   const modal = document.getElementById('imageModal');
   const modalImage = document.getElementById('modalImage');
   const closeModal = document.getElementById('closeModal');
   const prevButton = document.getElementById('prevImage');
   const nextButton = document.getElementById('nextImage');
 
-  // Open modal on image click
   document.querySelectorAll('#detailImages img').forEach(img => {
     img.addEventListener('click', () => {
       currentIndex = parseInt(img.getAttribute('data-index'));
       modalImage.src = allImages[currentIndex];
       modal.classList.remove('hidden');
+      document.body.classList.add('modal-open');
     });
   });
 
-  // Close modal
   closeModal.addEventListener('click', () => {
     modal.classList.add('hidden');
+    document.body.classList.remove('modal-open');
   });
 
-  // Click outside image closes modal
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
       modal.classList.add('hidden');
+      document.body.classList.remove('modal-open');
     }
   });
 
-  // Show previous image
   prevButton.addEventListener('click', (e) => {
     e.stopPropagation();
     currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
     modalImage.src = allImages[currentIndex];
   });
 
-  // Show next image
   nextButton.addEventListener('click', (e) => {
     e.stopPropagation();
     currentIndex = (currentIndex + 1) % allImages.length;
