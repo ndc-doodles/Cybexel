@@ -415,6 +415,20 @@ content: ` Creating an effective social media marketing strategy starts with cle
   if (data) {
     document.getElementById('detailHeading').textContent = data.heading;
     document.getElementById('detailDescription').textContent = data.description;
+    const paraSection = document.createElement('div');
+paraSection.className = 'space-y-4 text-gray-400 mb-8 max-w-4xl';
+
+['para1', 'para2', 'para3'].forEach(key => {
+  if (data[key]) {
+    const p = document.createElement('p');
+    p.textContent = data[key];
+    paraSection.appendChild(p);
+  }
+});
+
+// Insert paraSection before the images
+document.getElementById('detailDescription').insertAdjacentElement('afterend', paraSection);
+
     document.getElementById('detailImages').innerHTML = data.images.map((src, index) => `
       <img src="${src}" alt="" data-index="${index}" class="w-full rounded-lg object-cover cursor-pointer transition transform hover:scale-105">
     `).join('');
@@ -473,19 +487,21 @@ const cards = document.querySelectorAll('.card');
   const overlayImages = document.getElementById('overlayImages');
   const closeOverlay = document.getElementById('closeOverlay');
 
- cards.forEach(card => {
+cards.forEach(card => {
   card.addEventListener('click', () => {
     const data = {
       heading: card.getAttribute('data-heading'),
       description: card.getAttribute('data-description'),
-images: JSON.parse(card.getAttribute('data-images'))
+      para1: card.getAttribute('data-para1'),
+      para2: card.getAttribute('data-para2'),
+      para3: card.getAttribute('data-para3'),
+      images: JSON.parse(card.getAttribute('data-images'))
     };
-    // Save to localStorage
     localStorage.setItem('selectedCard', JSON.stringify(data));
-    // Redirect to detail page
     window.location.href = 'detail.html';
   });
 });
+
 
 
   closeOverlay.addEventListener('click', () => {
