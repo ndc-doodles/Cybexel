@@ -407,32 +407,84 @@ content: ` Creating an effective social media marketing strategy starts with cle
   // cybexel life detail page
 
   
- window.addEventListener('DOMContentLoaded', function() {
+ window.addEventListener('DOMContentLoaded', function () {
   const data = JSON.parse(localStorage.getItem('selectedCard'));
   let currentIndex = 0;
   let allImages = [];
 
   if (data) {
+    // Set heading and description
     document.getElementById('detailHeading').textContent = data.heading;
     document.getElementById('detailDescription').textContent = data.description;
 
+    // Inject only para1 and para2
     const paraContainer = document.getElementById('detailParagraphs');
-    ['para1', 'para2', 'para3'].forEach(key => {
+    ['para1', 'para2'].forEach(key => {
       if (data[key]) {
         const p = document.createElement('p');
         p.textContent = data[key];
-        p.className = "text-base leading-relaxed"; // Optional styling
+        p.className = "text-base leading-relaxed mb-4";
         paraContainer.appendChild(p);
       }
     });
 
+    // Load image thumbnails
     document.getElementById('detailImages').innerHTML = data.images.map((src, index) => `
-      <img src="${src}" alt="" data-index="${index}" class="w-full rounded-lg object-cover cursor-pointer transition transform hover:scale-105">
+      <img 
+        src="${src}" 
+        alt="Image ${index + 1}" 
+        data-index="${index}" 
+        class="w-full rounded-lg object-cover cursor-pointer transition transform hover:scale-105"
+      >
     `).join('');
+
     allImages = data.images;
+
+    // Modal logic
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+    const prevButton = document.getElementById('prevImage');
+    const nextButton = document.getElementById('nextImage');
+
+    document.querySelectorAll('#detailImages img').forEach(img => {
+      img.addEventListener('click', () => {
+        currentIndex = parseInt(img.getAttribute('data-index'));
+        modalImage.src = allImages[currentIndex];
+        modal.classList.remove('hidden');
+        document.body.classList.add('modal-open');
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      document.body.classList.remove('modal-open');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        document.body.classList.remove('modal-open');
+      }
+    });
+
+    prevButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+      modalImage.src = allImages[currentIndex];
+    });
+
+    nextButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % allImages.length;
+      modalImage.src = allImages[currentIndex];
+    });
+
   } else {
     document.getElementById('detailHeading').textContent = "No data found.";
   }
+
+
 
   const modal = document.getElementById('imageModal');
   const modalImage = document.getElementById('modalImage');
@@ -491,7 +543,7 @@ cards.forEach(card => {
       description: card.getAttribute('data-description'),
       para1: card.getAttribute('data-para1'),
       para2: card.getAttribute('data-para2'),
-      para3: card.getAttribute('data-para3'),
+     
       images: JSON.parse(card.getAttribute('data-images'))
     };
     localStorage.setItem('selectedCard', JSON.stringify(data));
