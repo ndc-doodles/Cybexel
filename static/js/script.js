@@ -136,3 +136,13 @@ window.toggleFab = function() {
 
 
 
+  const scrollContainer = document.getElementById('scrollContainer');
+  const scrollAmount = 300; // Amount in pixels to scroll
+
+  document.getElementById('scrollLeft').addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  document.getElementById('scrollRight').addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
