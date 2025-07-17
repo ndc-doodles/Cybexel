@@ -53,22 +53,6 @@ h3{
   font-family: "Montserrat", sans-serif;
 }
 
-.dot-pattern {
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 12px 12px;
-  opacity: 0.6;
-  width: 120px;
-  height: 80px;
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -115,7 +99,7 @@ h3{
 
 
 
-  @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
 
 * {
   margin: 0;
